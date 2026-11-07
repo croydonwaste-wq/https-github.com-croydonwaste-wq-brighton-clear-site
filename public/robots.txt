@@ -1,0 +1,20 @@
+# robots.txt for Gutter Cleanings Near Me
+# https://www.guttercleaningsnearme.co.uk
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.guttercleaningsnearme.co.uk/sitemap.xml
+
+# Crawl-delay for polite bots
+Crawl-delay: 1
+
+# Allow all CSS, JS, and images for proper rendering
+Allow: /*.css
+Allow: /*.js
+Allow: /*.jpg
+Allow: /*.jpeg
+Allow: /*.png
+Allow: /*.webp
+Allow: /*.svg
