@@ -7,6 +7,9 @@ const corsHeaders = {
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
 };
 
+// Inbox that receives website leads.
+const LEADS_EMAIL = 'info@croydonwaste.co.uk';
+
 // Input validation schema
 const quoteSchema = z.object({
   name: z.string().trim().min(1).max(100),
@@ -226,14 +229,16 @@ Deno.serve(async (req) => {
         ${imageListHtml}
         
         <hr>
-        <p style="color: #666; font-size: 12px;">This quote request was submitted via surreysussexwaste.co.uk</p>
+        <p style="color: #666; font-size: 12px;">This quote request was submitted via guttercleaningsnearme.co.uk</p>
       `;
 
-      console.log('Sending email to info@surreysussexwaste.co.uk...');
+      console.log(`Sending email to ${LEADS_EMAIL}...`);
       const emailResponse = await resend.emails.send({
-        from: 'Surrey Sussex Waste <noreply@surreysussexwaste.co.uk>',
-        to: ['info@surreysussexwaste.co.uk'],
-        subject: `New Quote Request from ${quoteData.name}`,
+        // Sender must stay on a domain verified in Resend (surreysussexwaste.co.uk is the verified one).
+        from: 'Gutter Cleanings Near Me <noreply@surreysussexwaste.co.uk>',
+        to: [LEADS_EMAIL],
+        reply_to: quoteData.email,
+        subject: `Gutter cleaning quote request – ${quoteData.name} (${quoteData.postcode})`,
         html: emailHtml,
       });
 

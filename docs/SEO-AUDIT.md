@@ -13,16 +13,16 @@ The site has a sensible structure (home → 6 services → areas hub → 55 town
 
 | # | Finding | Severity | Status |
 |---|---|---|---|
-| 1 | **`www.guttercleaningsnearme.co.uk` fails SSL** (DNS points to the host, but no certificate is issued for `www`). Every canonical tag, the sitemap, robots.txt and schema point to the `www` address — so Google is told the "real" version of every page is on a host that does not load. | ★★★★★ | **HUMAN ACTION REQUIRED** (hosting setting, 2 min – see §8) |
+| 1 | **`www.guttercleaningsnearme.co.uk` fails SSL** (DNS points to the host, but no certificate is issued for `www`). Every canonical tag, the sitemap, robots.txt and schema point to the `www` address — so Google is told the "real" version of every page is on a host that does not load. | ★★★★★ | **Resolved 7 Nov** – www now 301s to the apex; canonicals, sitemap, robots and schema switched to `https://guttercleaningsnearme.co.uk` |
 | 2 | Site is a client-side SPA: every URL returns an empty `<div id="root">`. Google renders JS, but most AI search crawlers (ChatGPT, Perplexity, Claude) and link previews do not, so they saw an empty page with the homepage title on all 73 URLs. | ★★★★★ | **Fixed in code** – build-time prerendering |
-| 3 | Quote-form leads are emailed to **info@surreysussexwaste.co.uk** with "Surrey Sussex Waste" branding (Supabase function `submit-quote`). | ★★★★★ | **HUMAN APPROVAL REQUIRED** (may be intentional) |
+| 3 | Quote-form leads are emailed to **info@surreysussexwaste.co.uk** with "Surrey Sussex Waste" branding (Supabase function `submit-quote`). | ★★★★★ | **Changed in code** – leads now go to info@croydonwaste.co.uk (function must be redeployed) |
 | 4 | 11 town URLs (incl. **Portslade and Croydon, which were in the sitemap**) rendered indexable "Gutter Cleaning in **This Area**" pages; 9 "nearby area" links pointed to them. | ★★★★★ | **Fixed** |
 | 5 | Privacy page named a different company ("Mr Gutter Cleaning", info@mrguttercleaning.co.uk); meta author was "Brighton & Hove Waste Clearance"; twitter:site was `@lovable_dev`. | ★★★★ | **Fixed** |
 | 6 | Two `<meta name="description">` tags on every page. | ★★★★ | **Fixed** |
 | 7 | /pricing (a key commercial page) was linked only from /sitemap. | ★★★★ | **Fixed** |
 | 8 | Contradictory prices (£60–£150 in FAQs vs "from £80" on Pricing and the £80 minimum in Terms) and opening hours (schema 7am–8pm daily vs Contact page Mon–Sat 7–7, Sun 8–5). | ★★★★ | **Fixed to match Pricing/Contact** – owner to verify |
 | 9 | Location pages ~320 words, ~95 % templated, false "we're based locally" claim on 55 towns, identical FAQPage markup ×55. | ★★★★ | **Improved** (unique local section, claims corrected) |
-| 10 | Testimonials on /about (Sarah M., James T., Emma L., David R.) and "5★ Rated / trusted by hundreds" claims cannot be verified. | ★★★★ | **HUMAN APPROVAL REQUIRED** (legal risk if not genuine) |
+| 10 | Testimonials on /about (Sarah M., James T., Emma L., David R.) and "5★ Rated / trusted by hundreds" claims cannot be verified. | ★★★★ | **Removed** – owner confirmed they are not verified; replaced with a link to the Google reviews |
 
 **Important deployment note:** this GitHub repo is **not connected to Lovable**. The fixes are committed here, built and tested, but **they are not live yet**. See §8 for how to deploy.
 
@@ -143,10 +143,10 @@ UK price context (2026 guides): semi-detached about £65–£120 (Less.co.uk sur
 
 | Item | Why | What to do |
 |---|---|---|
-| **Fix `www` SSL** ★★★★★ | All canonicals/sitemap point to a host that fails | Lovable → project → Settings → Domains → add `www.guttercleaningsnearme.co.uk` (redirect to primary). Then confirm `https://www.guttercleaningsnearme.co.uk` loads. |
+| ~~Fix `www` SSL~~ | Done by owner 7 Nov | www → apex redirect confirmed working |
 | **Deploy these changes** ★★★★★ | Repo isn't linked to Lovable | Option A: in Lovable, connect GitHub and move this code into the Lovable-linked repo. Option B: deploy `dist/` from this repo to Cloudflare Pages/Netlify and point DNS there. Option C: ask me to send the key edits to the Lovable agent (uses Lovable credits; the prerender step may not run on Lovable's build). |
-| **Quote email routing** ★★★★★ — HUMAN APPROVAL REQUIRED | Leads go to info@surreysussexwaste.co.uk as "Surrey Sussex Waste" | Confirm whether that is intended. If not, change `to`/`from` in `supabase/functions/submit-quote/index.ts` and redeploy the function from Lovable/Supabase. |
-| **Testimonials & ratings** — HUMAN APPROVAL REQUIRED | Named reviews on /about, "5★ Rated", "trusted by hundreds" can't be verified. Fake or unverifiable reviews breach the CMA's DMCC Act 2024 rules. | If they are real Google reviews, keep them and link each one. If not, remove them. Better: embed or link the real Google Business Profile reviews. |
+| **Redeploy quote function** ★★★★★ | `to` changed to info@croydonwaste.co.uk, sender name "Gutter Cleanings Near Me", reply-to = customer | Redeploy `submit-quote` from Lovable/Supabase. The sender address stays on surreysussexwaste.co.uk because that is the domain the Resend setup appears to use – **verify** it's verified in Resend, or emails won't send. Then submit one test enquiry. |
+| ~~Testimonials & ratings~~ | Owner confirmed not verified | Removed from /about; "5★ Rated"/"trusted by hundreds" replaced with "Free Photo Quotes". Add genuine Google reviews later. |
 | **Claims to verify** — VERIFICATION REQUIRED | £5M public liability, SkyVac equipment, same-day / 7-day service, 2-hour quote replies, hours, £80/£120/£180 prices, minor repairs included in plans | Confirm or correct; all live in `src/data/*` and page files. |
 | **Images** | All AI-generated; several show people standing on roofs/ladders, contradicting the "ground-level, no ladders" message, and US-style houses | Replace with real job photos (before/after, van, team) – the biggest E-E-A-T upgrade available. |
 | **Coverage** | 57 towns from Croydon to Eastbourne to Haslemere | Confirm you genuinely serve all of them; prune any you don't. |

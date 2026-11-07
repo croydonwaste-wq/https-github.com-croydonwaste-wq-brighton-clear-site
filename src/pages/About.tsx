@@ -31,33 +31,6 @@ const About = () => {
     },
   ];
 
-  const reviews = [
-    {
-      name: "Sarah M.",
-      location: "Hove",
-      rating: 5,
-      text: "Excellent service! They cleared all the blocked gutters in under an hour. Very professional and reasonably priced.",
-    },
-    {
-      name: "James T.",
-      location: "Brighton",
-      rating: 5,
-      text: "Needed same-day service for overflowing gutters. They arrived within 3 hours and sorted everything. Highly recommend.",
-    },
-    {
-      name: "Emma L.",
-      location: "Worthing",
-      rating: 5,
-      text: "Used them for annual gutter cleaning. Polite, efficient and thorough. Will definitely use again next year.",
-    },
-    {
-      name: "David R.",
-      location: "Lewes",
-      rating: 5,
-      text: "Great communication and fair pricing. They even sent photos of the work completed which was really helpful.",
-    },
-  ];
-
   const googleReviewsLink = "https://share.google/QI23nOKZGrHSjaTpu";
 
   return (
@@ -177,29 +150,11 @@ const About = () => {
 
       <section className="py-16">
         <div className="container">
-          <h2 className="mb-4 text-center">What Our Customers Say</h2>
-          <p className="mx-auto mb-8 max-w-2xl text-center text-muted-foreground">
-            Don't just take our word for it—see what Brighton & Hove residents say about our service.
+          <h2 className="mb-4 text-center">Customer Reviews</h2>
+          <p className="mx-auto mb-6 max-w-2xl text-center text-muted-foreground">
+            Read what customers say about us on Google, or leave a review after your job.
           </p>
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            {reviews.map((review, index) => (
-              <Card key={index}>
-                <CardContent className="pt-6">
-                  <div className="mb-3 flex gap-1">
-                    {[...Array(review.rating)].map((_, i) => (
-                      <Star key={i} className="h-5 w-5 fill-amber-400 text-amber-400" />
-                    ))}
-                  </div>
-                  <p className="mb-4 text-sm text-muted-foreground">"{review.text}"</p>
-                  <div className="border-t pt-3">
-                    <p className="font-semibold">{review.name}</p>
-                    <p className="text-sm text-muted-foreground">{review.location}</p>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-          <div className="mt-8 text-center">
+          <div className="text-center">
             <a 
               href={googleReviewsLink} 
               target="_blank" 

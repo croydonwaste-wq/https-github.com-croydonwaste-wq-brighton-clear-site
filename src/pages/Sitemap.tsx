@@ -108,7 +108,7 @@ const Sitemap = () => {
             rel="noopener noreferrer"
           >
             <FileText className="h-4 w-4" />
-            www.guttercleaningsnearme.co.uk/sitemap.xml
+            guttercleaningsnearme.co.uk/sitemap.xml
           </a>
         </div>
       </div>

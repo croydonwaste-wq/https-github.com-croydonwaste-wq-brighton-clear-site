@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Phone, MessageCircle, Shield, Clock, Award, Users, CheckCircle2, Star, Droplets, Home as HomeIcon, Building2, Wrench } from "lucide-react";
+import { Phone, MessageCircle, Shield, Clock, Award, Users, CheckCircle2, Camera, Droplets, Home as HomeIcon, Building2, Wrench } from "lucide-react";
 import { SEOSchema } from "@/components/SEOSchema";
 import { QuoteDialog } from "@/components/QuoteDialog";
 import { FAQSection } from "@/components/FAQSection";
@@ -53,9 +53,9 @@ const Home = () => {
       description: "Industry-leading SkyVac gutter vacuum systems. Safe, thorough cleaning without ladders."
     },
     {
-      icon: Star,
-      title: "5★ Rated Service",
-      description: "Trusted by hundreds of homeowners and businesses. Before and after photos provided."
+      icon: Camera,
+      title: "Free Photo Quotes",
+      description: "Send photos of your gutters for a fixed-price quote. Before and after photos provided on request."
     },
   ];
 
@@ -132,8 +132,8 @@ const Home = () => {
                   <span className="text-sm font-medium">Same-Day Service</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Star className="h-5 w-5 text-primary" />
-                  <span className="text-sm font-medium">5★ Rated</span>
+                  <Camera className="h-5 w-5 text-primary" />
+                  <span className="text-sm font-medium">Free Photo Quotes</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Users className="h-5 w-5 text-primary" />

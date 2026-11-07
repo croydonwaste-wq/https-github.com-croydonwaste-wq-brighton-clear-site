@@ -3,9 +3,8 @@
  * Anything marked VERIFY must be confirmed by the business owner.
  */
 
-// Canonical host. The live site currently only serves the bare domain; www has no
-// SSL certificate on the host. Keep this in sync with the primary domain set in hosting.
-export const SITE_URL = "https://www.guttercleaningsnearme.co.uk";
+// Canonical host = the primary domain in hosting (www redirects here). Keep in sync.
+export const SITE_URL = "https://guttercleaningsnearme.co.uk";
 
 export const brandData = {
   name: "Gutter Cleanings Near Me",
@@ -18,6 +17,8 @@ export const brandData = {
   whatsappLink: "https://wa.me/441273569347",
   whatsappQuoteLink: "https://wa.me/441273569347?text=I%20need%20a%20quote%20for%20gutter%20cleaning",
   email: "info@guttercleaningsnearme.co.uk",
+  // Inbox that receives website quote requests (see supabase/functions/submit-quote).
+  leadsEmail: "info@croydonwaste.co.uk",
   emailLink: "mailto:info@guttercleaningsnearme.co.uk",
   googleReviewsLink: "https://share.google/QI23nOKZGrHSjaTpu",
   ogImage:
