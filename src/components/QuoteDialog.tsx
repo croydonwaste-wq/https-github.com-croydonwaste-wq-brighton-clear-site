@@ -15,6 +15,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { useToast } from "@/hooks/use-toast";
 import { Upload, X } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
+import { checkUploads, trackEvent } from "@/lib/track";
 
 export const QuoteDialog = () => {
   const [open, setOpen] = useState(false);
@@ -24,8 +25,12 @@ export const QuoteDialog = () => {
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files) {
-      const newFiles = Array.from(e.target.files).slice(0, 10 - files.length);
-      setFiles([...files, ...newFiles]);
+      const { ok, rejected } = checkUploads(Array.from(e.target.files));
+      if (rejected.length) {
+        toast({ title: "Some photos weren't added", description: rejected.join("; "), variant: "destructive" });
+      }
+      setFiles([...files, ...ok].slice(0, 10));
+      e.target.value = "";
     }
   };
 
@@ -53,6 +58,7 @@ export const QuoteDialog = () => {
       });
 
       if (error) throw error;
+      trackEvent("generate_lead", { form: "dialog" });
 
       toast({
         title: "Quote Request Sent!",
@@ -91,39 +97,39 @@ export const QuoteDialog = () => {
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="grid gap-4 sm:grid-cols-2">
             <div>
-              <Label htmlFor="name">Name *</Label>
-              <Input id="name" name="name" required placeholder="John Smith" />
+              <Label htmlFor="qd-name">Name *</Label>
+              <Input id="qd-name" name="name" required placeholder="John Smith" />
             </div>
             <div>
-              <Label htmlFor="phone">Phone *</Label>
-              <Input id="phone" name="phone" type="tel" required placeholder="07123 456789" />
+              <Label htmlFor="qd-phone">Phone *</Label>
+              <Input id="qd-phone" name="phone" type="tel" required placeholder="07123 456789" />
             </div>
           </div>
 
           <div>
-            <Label htmlFor="email">Email *</Label>
-            <Input id="email" name="email" type="email" required placeholder="john@example.com" />
+            <Label htmlFor="qd-email">Email *</Label>
+            <Input id="qd-email" name="email" type="email" required placeholder="john@example.com" />
           </div>
 
           <div>
-            <Label htmlFor="postcode">Postcode *</Label>
-            <Input id="postcode" name="postcode" required placeholder="BN1 1AA" />
+            <Label htmlFor="qd-postcode">Postcode *</Label>
+            <Input id="qd-postcode" name="postcode" required placeholder="BN1 1AA" />
           </div>
 
           <div>
-            <Label htmlFor="datetime">Preferred Date & Time</Label>
-            <Input id="datetime" name="preferredDatetime" type="datetime-local" />
+            <Label htmlFor="qd-datetime">Preferred Date & Time</Label>
+            <Input id="qd-datetime" name="preferredDatetime" type="datetime-local" />
           </div>
 
           <div>
-            <Label htmlFor="access">Access Notes</Label>
-            <Input id="access" name="accessNotes" placeholder="e.g., 2nd floor, parking available, gate code" />
+            <Label htmlFor="qd-access">Access Notes</Label>
+            <Input id="qd-access" name="accessNotes" placeholder="e.g., 2nd floor, parking available, gate code" />
           </div>
 
           <div>
-            <Label htmlFor="description">Details about your gutters *</Label>
+            <Label htmlFor="qd-description">Details about your gutters *</Label>
             <Textarea
-              id="description"
+              id="qd-description"
               name="description"
               required
               placeholder="Please describe your gutter cleaning needs (property type, gutter length, access notes, etc.)..."
@@ -135,7 +141,7 @@ export const QuoteDialog = () => {
             <Label>Upload Photos (up to 10 images)</Label>
             <div className="mt-2">
               <label
-                htmlFor="file-upload"
+                htmlFor="qd-file-upload"
                 className="flex cursor-pointer items-center justify-center rounded-md border-2 border-dashed border-muted-foreground/25 p-6 transition-colors hover:border-muted-foreground/50"
               >
                 <div className="text-center">
@@ -143,10 +149,10 @@ export const QuoteDialog = () => {
                   <p className="mt-2 text-sm text-muted-foreground">
                     Click to upload (JPG, PNG, HEIC)
                   </p>
-                  <p className="text-xs text-muted-foreground">Max 20MB per file</p>
+                  <p className="text-xs text-muted-foreground">Max 10MB per file</p>
                 </div>
                 <input
-                  id="file-upload"
+                  id="qd-file-upload"
                   type="file"
                   className="hidden"
                   multiple
@@ -179,9 +185,9 @@ export const QuoteDialog = () => {
           </div>
 
           <div className="flex items-start space-x-2">
-            <Checkbox id="consent" required />
+            <Checkbox id="qd-consent" required />
             <label
-              htmlFor="consent"
+              htmlFor="qd-consent"
               className="text-sm leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
             >
               I consent to be contacted via phone, email or text regarding my quote request.

@@ -8,6 +8,7 @@ import { Phone, MessageCircle, CheckCircle, MapPin, ArrowRight } from "lucide-re
 import { locationData } from "@/data/locationData";
 import servicesData from "@/data/servicesData";
 import { brandData } from "@/data/brandData";
+import { groupForSlug } from "@/data/areaGroups";
 import NotFound from "./NotFound";
 import gutterTeam from "@/assets/gutter-cleaning-team.webp";
 import ladderClean from "@/assets/gutter-cleaning-on-ladder.webp";
@@ -30,6 +31,10 @@ const LocationPage = () => {
   const landmarks = data.localInfo.landmarks;
   const roads = data.localInfo.roads;
   const nearby = data.nearby.filter((n) => locationData[n.slug]);
+  const group = groupForSlug(location);
+  const groupTowns = (group?.areas || []).filter(
+    (a) => a.slug !== location && locationData[a.slug] && !nearby.some((n) => n.slug === a.slug),
+  );
 
   const services = [
     { label: "Residential gutter cleaning (all property types)", href: "/services/gutter-cleaning-near-me" },
@@ -261,6 +266,23 @@ const LocationPage = () => {
                 </Link>
               </Button>
             </div>
+          </div>
+        </section>
+      )}
+
+      {group && groupTowns.length > 0 && (
+        <section className="pb-4">
+          <div className="container">
+            <h2 className="mb-4 text-2xl">Other Towns We Cover: {group.title}</h2>
+            <ul className="flex flex-wrap gap-x-4 gap-y-2 text-sm">
+              {groupTowns.map((a) => (
+                <li key={a.slug}>
+                  <Link to={`/gutter-cleaning/${a.slug}`} className="text-primary hover:underline">
+                    {a.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
         </section>
       )}

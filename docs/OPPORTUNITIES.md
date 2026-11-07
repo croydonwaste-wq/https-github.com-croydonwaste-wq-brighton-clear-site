@@ -88,6 +88,13 @@ Added as FAQs on the relevant pages (answers use only facts already on the site)
 - Pricing FAQ block, services hub regrouping, cross-links.
 - **Verified on the production build:** `tsc` ✔, build ✔ (88 pages prerendered + sitemap), Playwright on all 88 routes plus 2 bad URLs: 1 title / description / H1 per page, canonical = own URL, valid JSON-LD, 0 broken internal links, bad URLs noindex, mobile bar and no horizontal scroll ✔. Quote form not submitted (would create a real lead).
 
+## 8b. Follow-up fixes (same day)
+- Quote forms: client-side check matches the server (10MB, image types only) with a clear message; dialog field IDs no longer clash with the Contact form; the dialog's "Max 20MB" text corrected to 10MB.
+- Lead email: customer text HTML-escaped before it goes into the notification email.
+- Conversion tracking hooks: `phone_click`, `whatsapp_click` and `generate_lead` (after a successful submit) are pushed to `dataLayer`/`gtag` **if** GA4 or GTM is added. They do nothing until then and send no personal data.
+- Town pages: "Other towns we cover: {group}" links to the rest of the town's `/areas` group (groups now live in `src/data/areaGroups.ts`).
+- Verified: tracking events fire, an 11MB file is rejected and a valid one accepted, no duplicate IDs with the dialog open, and full 88-page QA still clean.
+
 ## 9. Approval / confirmation needed
 - **Method details** to check on the new pages: moss treatment after removal; conservatory roof material handling; RAMS on request; whether you fit both brush **and** mesh guards; that you arrange cherry pickers (own or hired – the copy says "arrange"). **BUSINESS CONFIRMATION REQUIRED.**
 - Extra towns listed in §3.

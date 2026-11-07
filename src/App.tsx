@@ -7,6 +7,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { MobileContactBar } from "@/components/MobileContactBar";
 import { ScrollToTop } from "@/components/ScrollToTop";
+import { ConversionTracking } from "@/components/ConversionTracking";
 import Home from "./pages/Home";
 import Services from "./pages/Services";
 import ServiceDetail from "./pages/ServiceDetail";
@@ -30,6 +31,7 @@ export const AppShell = () => (
       <Toaster />
       <Sonner />
       <ScrollToTop />
+      <ConversionTracking />
       <div className="flex min-h-screen flex-col">
         <Header />
         <main className="flex-1">

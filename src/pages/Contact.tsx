@@ -9,6 +9,7 @@ import { useToast } from "@/hooks/use-toast";
 import { Phone, Mail, MapPin, Clock, MessageCircle, Upload, X } from "lucide-react";
 import { useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
+import { checkUploads, trackEvent } from "@/lib/track";
 import heroSurrey from "@/assets/gutter-cleaner-on-ladder.webp";
 
 const Contact = () => {
@@ -18,8 +19,12 @@ const Contact = () => {
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files) {
-      const newFiles = Array.from(e.target.files).slice(0, 10 - files.length);
-      setFiles([...files, ...newFiles]);
+      const { ok, rejected } = checkUploads(Array.from(e.target.files));
+      if (rejected.length) {
+        toast({ title: "Some photos weren't added", description: rejected.join("; "), variant: "destructive" });
+      }
+      setFiles([...files, ...ok].slice(0, 10));
+      e.target.value = "";
     }
   };
 
@@ -47,6 +52,7 @@ const Contact = () => {
       });
 
       if (error) throw error;
+      trackEvent("generate_lead", { form: "contact" });
 
       toast({
         title: "Message Sent!",

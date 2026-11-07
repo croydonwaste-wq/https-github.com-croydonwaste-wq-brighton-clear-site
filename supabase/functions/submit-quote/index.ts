@@ -7,6 +7,10 @@ const corsHeaders = {
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
 };
 
+// Escape customer-supplied text before putting it in the notification email.
+const esc = (v: string | undefined) =>
+  (v ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+
 // Inbox that receives website leads.
 const LEADS_EMAIL = 'info@croydonwaste.co.uk';
 
@@ -213,18 +217,18 @@ Deno.serve(async (req) => {
         
         <h3>Contact Information:</h3>
         <ul>
-          <li><strong>Name:</strong> ${quoteData.name}</li>
-          <li><strong>Phone:</strong> ${quoteData.phone}</li>
-          <li><strong>Email:</strong> ${quoteData.email}</li>
-          <li><strong>Postcode:</strong> ${quoteData.postcode}</li>
+          <li><strong>Name:</strong> ${esc(quoteData.name)}</li>
+          <li><strong>Phone:</strong> ${esc(quoteData.phone)}</li>
+          <li><strong>Email:</strong> ${esc(quoteData.email)}</li>
+          <li><strong>Postcode:</strong> ${esc(quoteData.postcode)}</li>
         </ul>
 
         <h3>Job Details:</h3>
         <p><strong>Description:</strong></p>
-        <p>${quoteData.description}</p>
+        <p style="white-space: pre-wrap">${esc(quoteData.description)}</p>
         
-        ${quoteData.preferredDatetime ? `<p><strong>Preferred Date/Time:</strong> ${quoteData.preferredDatetime}</p>` : ''}
-        ${quoteData.accessNotes ? `<p><strong>Access Notes:</strong> ${quoteData.accessNotes}</p>` : ''}
+        ${quoteData.preferredDatetime ? `<p><strong>Preferred Date/Time:</strong> ${esc(quoteData.preferredDatetime)}</p>` : ''}
+        ${quoteData.accessNotes ? `<p><strong>Access Notes:</strong> ${esc(quoteData.accessNotes)}</p>` : ''}
         
         ${imageListHtml}
         
