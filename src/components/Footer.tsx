@@ -8,7 +8,12 @@ export const Footer = () => {
     { name: "Downpipe Unblocking", href: "/services/downpipe-unblocking" },
     { name: "Gutter Repairs", href: "/services/gutter-repairs" },
     { name: "Fascia & Soffit Cleaning", href: "/services/fascia-soffit-cleaning" },
+    { name: "Conservatory Gutters", href: "/services/conservatory-gutter-cleaning" },
+    { name: "Gutter Guards", href: "/services/gutter-guard-installation" },
+    { name: "Commercial Gutter Cleaning", href: "/services/commercial-gutter-cleaning" },
+    { name: "Landlords & Letting Agents", href: "/services/landlord-letting-agent-gutter-cleaning" },
     { name: "Maintenance Plans", href: "/services/gutter-maintenance-plans" },
+    { name: "All Services", href: "/services" },
   ];
 
   const areaLinks = [

@@ -215,6 +215,25 @@ const Home = () => {
             ))}
           </div>
 
+          <div className="mt-12">
+            <h3 className="mb-4 text-center text-lg font-semibold">Specialist & Commercial Services</h3>
+            <div className="flex flex-wrap justify-center gap-2">
+              {[
+                ["Conservatory gutter cleaning", "/services/conservatory-gutter-cleaning"],
+                ["Gutter guard installation", "/services/gutter-guard-installation"],
+                ["Roof moss removal", "/services/roof-moss-removal"],
+                ["Gutter camera inspection", "/services/gutter-camera-inspection"],
+                ["High-level gutter cleaning", "/services/high-level-gutter-cleaning"],
+                ["Commercial gutter cleaning", "/services/commercial-gutter-cleaning"],
+                ["Landlords & letting agents", "/services/landlord-letting-agent-gutter-cleaning"],
+              ].map(([label, href]) => (
+                <Link key={href} to={href} className="rounded-full border px-4 py-2 text-sm hover:border-primary hover:bg-primary/5 hover:text-primary">
+                  {label}
+                </Link>
+              ))}
+            </div>
+          </div>
+
           <div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Button size="lg" asChild>
               <Link to="/services">View All Services</Link>

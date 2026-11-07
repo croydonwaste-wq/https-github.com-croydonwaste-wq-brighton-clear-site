@@ -37,6 +37,13 @@ const LocationPage = () => {
     { label: "Downpipe unblocking and flushing", href: "/services/downpipe-unblocking" },
     { label: "Gutter repairs and leak fixing", href: "/services/gutter-repairs" },
     { label: "Fascia and soffit cleaning", href: "/services/fascia-soffit-cleaning" },
+    { label: "Conservatory gutter & roof cleaning", href: "/services/conservatory-gutter-cleaning" },
+    { label: "Gutter guard installation", href: "/services/gutter-guard-installation" },
+    { label: "Roof moss removal", href: "/services/roof-moss-removal" },
+    { label: "Gutter camera inspections", href: "/services/gutter-camera-inspection" },
+    { label: "High-level gutter cleaning (cherry picker)", href: "/services/high-level-gutter-cleaning" },
+    { label: "Commercial gutter cleaning", href: "/services/commercial-gutter-cleaning" },
+    { label: "Landlord & letting agent gutter cleaning", href: "/services/landlord-letting-agent-gutter-cleaning" },
     { label: "Twice-yearly maintenance plans", href: "/services/gutter-maintenance-plans" },
   ];
 
@@ -51,7 +58,7 @@ const LocationPage = () => {
     },
     {
       question: "Can you clean gutters on taller buildings?",
-      answer: `Our gutter vacuum system cleans from the ground up to three storeys, so most ${townName} houses need no ladders. For taller or harder-to-reach buildings we assess access when you send photos and quote accordingly.`,
+      answer: `Our gutter vacuum system cleans from the ground up to three storeys, so most ${townName} houses need no ladders. For taller buildings and deep box gutters we arrange cherry picker access – send photos and we'll confirm the right method.`,
     },
     {
       question: "How often should gutters be cleaned?",
@@ -203,7 +210,7 @@ const LocationPage = () => {
             {[
               { img: ladderClean, alt: `Residential gutter cleaning in ${townName}`, title: "Residential Gutter Cleaning", text: `Gutter vacuum cleaning for houses, bungalows and flats in ${townName}.`, href: "/services/gutter-cleaning-near-me" },
               { img: leafFilledGutter, alt: `Blocked gutter full of leaves in ${townName}`, title: "Blocked Gutter Clearance", text: "Fast clearance of gutters overflowing with leaves, moss and silt.", href: "/services/blocked-gutters-gutter-unblocking" },
-              { img: commercialGutters, alt: `Commercial gutter cleaning in ${townName}`, title: "Commercial & Landlord Contracts", text: "Scheduled gutter maintenance for businesses, landlords and managing agents.", href: "/services/gutter-maintenance-plans" },
+              { img: commercialGutters, alt: `Commercial gutter cleaning in ${townName}`, title: "Commercial Gutter Cleaning", text: `Offices, shops, schools and blocks of flats in ${townName}, with photo reports.`, href: "/services/commercial-gutter-cleaning" },
             ].map((card) => (
               <Link key={card.href} to={card.href} className="group overflow-hidden rounded-lg border bg-card transition-shadow hover:shadow-lg">
                 <img src={card.img} alt={card.alt} className="h-48 w-full object-cover" width={1280} height={720} loading="lazy" />

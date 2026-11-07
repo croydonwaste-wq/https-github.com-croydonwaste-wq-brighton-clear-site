@@ -1,5 +1,9 @@
 export interface ServiceDetail {
   slug: string;
+  /** core = original gutter services; specialist = specialist services; customer = customer-type services */
+  category?: "core" | "specialist" | "customer";
+  /** One-line summary used on hub cards and link lists. */
+  shortDescription?: string;
   title: string;
   metaTitle: string;
   metaDescription: string;
@@ -14,7 +18,9 @@ export interface ServiceDetail {
   faqs: Array<{ question: string; answer: string }>;
 }
 
-export const servicesData: ServiceDetail[] = [
+import { additionalServicesData } from "./additionalServicesData";
+
+const coreServicesData: ServiceDetail[] = [
   {
     slug: "gutter-cleaning-near-me",
     title: "Professional Gutter Cleaning Near Me",
@@ -353,6 +359,11 @@ export const servicesData: ServiceDetail[] = [
       }
     ]
   }
+];
+
+export const servicesData: ServiceDetail[] = [
+  ...coreServicesData.map((s) => ({ ...s, category: "core" as const })),
+  ...additionalServicesData,
 ];
 
 export default servicesData;

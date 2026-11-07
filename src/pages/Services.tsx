@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Phone, MessageCircle, Droplets, CheckCircle2, Wrench, Home as HomeIcon, Building2, Calendar } from "lucide-react";
+import { Phone, MessageCircle, Droplets, CheckCircle2, Wrench, Home as HomeIcon, Building2, Calendar, KeyRound, Sun, ShieldCheck, Camera, Leaf, ArrowUpToLine } from "lucide-react";
 import { SEOSchema } from "@/components/SEOSchema";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { QuoteDialog } from "@/components/QuoteDialog";
@@ -12,6 +12,9 @@ import downpipeImage from "@/assets/leaf-filled-gutter.webp";
 import repairsImage from "@/assets/commercial-gutter-cleaning.webp";
 import fasciaImage from "@/assets/fascia-soffit-washing.webp";
 import maintenanceImage from "@/assets/gutter-cleaning-team.webp";
+import scaffoldImage from "@/assets/scaffold-tower-gutter-access.webp";
+import equipmentImage from "@/assets/gutter-cleaning-equipment.webp";
+import heroLadderImage from "@/assets/gutter-cleaner-on-ladder.webp";
 
 const Services = () => {
   const serviceImages: Record<string, string> = {
@@ -20,7 +23,14 @@ const Services = () => {
     "downpipe-unblocking": downpipeImage,
     "gutter-repairs": repairsImage,
     "fascia-soffit-cleaning": fasciaImage,
-    "gutter-maintenance-plans": maintenanceImage
+    "gutter-maintenance-plans": maintenanceImage,
+    "commercial-gutter-cleaning": repairsImage,
+    "landlord-letting-agent-gutter-cleaning": maintenanceImage,
+    "conservatory-gutter-cleaning": fasciaImage,
+    "gutter-guard-installation": downpipeImage,
+    "gutter-camera-inspection": equipmentImage,
+    "roof-moss-removal": heroLadderImage,
+    "high-level-gutter-cleaning": scaffoldImage,
   };
 
   const serviceIcons: Record<string, typeof Droplets> = {
@@ -29,14 +39,27 @@ const Services = () => {
     "downpipe-unblocking": Wrench,
     "gutter-repairs": HomeIcon,
     "fascia-soffit-cleaning": Building2,
-    "gutter-maintenance-plans": Calendar
+    "gutter-maintenance-plans": Calendar,
+    "commercial-gutter-cleaning": Building2,
+    "landlord-letting-agent-gutter-cleaning": KeyRound,
+    "conservatory-gutter-cleaning": Sun,
+    "gutter-guard-installation": ShieldCheck,
+    "gutter-camera-inspection": Camera,
+    "roof-moss-removal": Leaf,
+    "high-level-gutter-cleaning": ArrowUpToLine,
   };
+
+  const groups: Array<{ key: "core" | "specialist" | "customer"; title: string; intro: string }> = [
+    { key: "core", title: "Gutter Cleaning, Unblocking & Repairs", intro: "Our everyday gutter services for homes across Sussex and Surrey." },
+    { key: "specialist", title: "Specialist Gutter & Roofline Services", intro: "Conservatories, gutter guards, camera inspections, roof moss and high-level access." },
+    { key: "customer", title: "Commercial, Landlord & Letting Agent Services", intro: "Gutter maintenance for businesses, managing agents, landlords and letting agents." },
+  ];
 
   return (
     <>
       <SEOSchema
         title="Gutter Cleaning Services | Cleaning, Unblocking & Repairs | Sussex & Surrey"
-        description="Professional gutter cleaning, repairs & maintenance across Brighton, Sussex & Surrey. Fully insured local service. Free quotes available."
+        description="Gutter cleaning, unblocking, repairs, conservatory gutters, gutter guards, roof moss removal, high-level and commercial gutter cleaning across Brighton, Sussex & Surrey. Free photo quotes."
         type="LocalBusiness"
         breadcrumbs={[
           { name: "Home", url: "/" },
@@ -74,42 +97,49 @@ const Services = () => {
           </Button>
         </div>
 
-        {/* Services Grid */}
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {servicesData.map((service) => {
-            const Icon = serviceIcons[service.slug] || Droplets;
-            const image = serviceImages[service.slug] || gutterCleaningImage;
-            
-            return (
-              <Card key={service.slug} className="group overflow-hidden transition-all duration-300 hover:shadow-lg">
-                <div className="overflow-hidden">
-                  <img
-                    src={image}
-                    alt={service.title}
-                    className="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                    loading="lazy"
-                  />
-                </div>
-                <CardHeader>
-                  <div className="mb-3 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
-                    <Icon className="h-6 w-6" />
-                  </div>
-                  <CardTitle className="text-xl">{service.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="mb-4 text-sm text-muted-foreground line-clamp-3">
-                    {service.intro}
-                  </p>
-                  <Button variant="outline" size="sm" asChild className="w-full group-hover:bg-primary group-hover:text-primary-foreground">
-                    <Link to={`/services/${service.slug}`}>
-                      View Full Details →
-                    </Link>
-                  </Button>
-                </CardContent>
-              </Card>
-            );
-          })}
-        </div>
+        {/* Services, grouped */}
+        {groups.map((group) => (
+          <section key={group.key} className="mb-16">
+            <h2 className="mb-2 text-2xl font-bold md:text-3xl">{group.title}</h2>
+            <p className="mb-8 text-muted-foreground">{group.intro}</p>
+            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+              {servicesData.filter((s) => s.category === group.key).map((service) => {
+                const Icon = serviceIcons[service.slug] || Droplets;
+                const image = serviceImages[service.slug] || gutterCleaningImage;
+                return (
+                  <Card key={service.slug} className="group overflow-hidden transition-all duration-300 hover:shadow-lg">
+                    <div className="overflow-hidden">
+                      <img
+                        src={image}
+                        alt={service.title}
+                        className="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                        width={1280}
+                        height={720}
+                        loading="lazy"
+                      />
+                    </div>
+                    <CardHeader>
+                      <div className="mb-3 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
+                        <Icon className="h-6 w-6" />
+                      </div>
+                      <h3 className="text-xl font-semibold leading-none tracking-tight">{service.title}</h3>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="mb-4 text-sm text-muted-foreground line-clamp-3">
+                        {service.shortDescription || service.intro}
+                      </p>
+                      <Button variant="outline" size="sm" asChild className="w-full group-hover:bg-primary group-hover:text-primary-foreground">
+                        <Link to={`/services/${service.slug}`}>
+                          View {service.title} →
+                        </Link>
+                      </Button>
+                    </CardContent>
+                  </Card>
+                );
+              })}
+            </div>
+          </section>
+        ))}
 
         {/* Why Choose Our Services */}
         <section className="mt-20">

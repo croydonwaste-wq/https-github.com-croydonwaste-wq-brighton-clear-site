@@ -181,15 +181,19 @@ const ServiceDetail = () => {
                 <CardContent className="pt-6">
                   <h3 className="mb-2 text-lg font-bold">Prices</h3>
                   <p className="mb-4 text-sm text-muted-foreground">
-                    Gutter cleaning starts from £{brandData.priceFrom}. Send photos for a fixed-price quote.
+                    {service.category === "core"
+                      ? `Gutter cleaning starts from £${brandData.priceFrom}. Send photos for a fixed-price quote.`
+                      : "Every job is different, so we price this service from your photos and send a fixed quote."}
                   </p>
                   <Button variant="outline" size="sm" className="w-full" asChild>
                     <Link to="/pricing">See Gutter Cleaning Prices</Link>
                   </Button>
                   <h3 className="mb-3 mt-6 text-lg font-bold">Related Services</h3>
                   <ul className="space-y-2 text-sm">
-                    {servicesData
+                    {[...servicesData]
                       .filter((s) => s.slug !== service.slug)
+                      .sort((a, b) => Number(b.category === service.category) - Number(a.category === service.category))
+                      .slice(0, 8)
                       .map((s) => (
                         <li key={s.slug}>
                           <Link to={`/services/${s.slug}`} className="text-primary hover:underline">

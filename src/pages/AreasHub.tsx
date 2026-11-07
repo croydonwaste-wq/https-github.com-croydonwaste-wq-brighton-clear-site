@@ -48,6 +48,8 @@ const AreasHub = () => {
     { name: "Littlehampton", slug: "littlehampton", description: "Expert gutter cleaning in Littlehampton" },
     { name: "Arundel", slug: "arundel", description: "Same-day gutter cleaning in Arundel" },
     { name: "Billingshurst", slug: "billingshurst", description: "Reliable gutter cleaning in Billingshurst" },
+    { name: "Bognor Regis", slug: "bognor-regis", description: "Gutter cleaning in Bognor Regis & Aldwick" },
+    { name: "Chichester", slug: "chichester", description: "Gutter cleaning across Chichester" },
   ];
 
   const eastSussexAreas = [
@@ -62,6 +64,9 @@ const AreasHub = () => {
     { name: "Portslade", slug: "portslade", description: "Gutter cleaning in Portslade & Mile Oak" },
     { name: "Brighton", slug: "brighton", description: "Trusted gutter cleaning across Brighton" },
     { name: "Eastbourne", slug: "eastbourne", description: "Reliable gutter cleaning in Eastbourne" },
+    { name: "Polegate", slug: "polegate", description: "Gutter cleaning in Polegate & Willingdon" },
+    { name: "Hailsham", slug: "hailsham", description: "Gutter cleaning across Hailsham" },
+    { name: "Crowborough", slug: "crowborough", description: "Gutter cleaning in Crowborough" },
   ];
 
   const northSurreyAreas = [
@@ -73,6 +78,9 @@ const AreasHub = () => {
     { name: "Oxted", slug: "oxted", description: "Fast gutter cleaning in Oxted" },
     { name: "Edenbridge", slug: "edenbridge", description: "Reliable gutter cleaning" },
     { name: "Croydon", slug: "croydon", description: "Gutter cleaning across Croydon" },
+    { name: "Purley", slug: "purley", description: "Gutter cleaning in Purley" },
+    { name: "Coulsdon", slug: "coulsdon", description: "Gutter cleaning in Coulsdon" },
+    { name: "Merstham", slug: "merstham", description: "Gutter cleaning in Merstham" },
   ];
 
   const otherAreas = [

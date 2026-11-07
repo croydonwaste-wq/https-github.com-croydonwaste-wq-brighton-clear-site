@@ -57,7 +57,7 @@ const FAQ = () => {
     },
     {
       question: "Do you provide commercial gutter cleaning services?",
-      answer: "Yes, we provide gutter cleaning for commercial buildings, offices, retail units, warehouses, schools, and industrial properties across Brighton, Hove, Sussex and Surrey. We can work outside business hours if required and provide compliance documentation and risk assessments for your records. Contact us for a commercial quote."
+      answer: "Yes, we provide gutter cleaning for commercial buildings, offices, retail units, warehouses, schools, and industrial properties across Brighton, Hove, Sussex and Surrey. We can work outside business hours, supply risk assessments and method statements on request, and arrange cherry picker access for taller buildings. See our commercial gutter cleaning page or contact us for a quote."
     },
     {
       question: "Can you work in all weathers?",

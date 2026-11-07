@@ -106,7 +106,7 @@ export const locationData: Record<string, LocationData> = {
     nearby: [
       { name: "Reigate", slug: "reigate" },
       { name: "Horley", slug: "horley" },
-      { name: "Chipstead", slug: "chipstead" },
+      { name: "Merstham", slug: "merstham" },
     ],
   },
   "dorking": {
@@ -488,7 +488,7 @@ export const locationData: Record<string, LocationData> = {
     nearby: [
       { name: "Worthing", slug: "worthing" },
       { name: "Arundel", slug: "arundel" },
-      { name: "Lancing", slug: "lancing" },
+      { name: "Bognor Regis", slug: "bognor-regis" },
     ],
   },
   "arundel": {
@@ -502,7 +502,7 @@ export const locationData: Record<string, LocationData> = {
     nearby: [
       { name: "Littlehampton", slug: "littlehampton" },
       { name: "Worthing", slug: "worthing" },
-      { name: "Storrington", slug: "storrington" },
+      { name: "Chichester", slug: "chichester" },
     ],
   },
   "billingshurst": {
@@ -546,7 +546,7 @@ export const locationData: Record<string, LocationData> = {
     nearby: [
       { name: "Haywards Heath", slug: "haywards-heath" },
       { name: "Lewes", slug: "lewes" },
-      { name: "East Grinstead", slug: "east-grinstead" },
+      { name: "Crowborough", slug: "crowborough" },
     ],
   },
   "peacehaven": {
@@ -587,7 +587,7 @@ export const locationData: Record<string, LocationData> = {
     },
     nearby: [
       { name: "Newhaven", slug: "newhaven" },
-      { name: "Peacehaven", slug: "peacehaven" },
+      { name: "Polegate", slug: "polegate" },
       { name: "Eastbourne", slug: "eastbourne" },
     ],
   },
@@ -658,7 +658,7 @@ export const locationData: Record<string, LocationData> = {
     nearby: [
       { name: "Seaford", slug: "seaford" },
       { name: "Peacehaven", slug: "peacehaven" },
-      { name: "Lewes", slug: "lewes" },
+      { name: "Hailsham", slug: "hailsham" },
     ],
   },
   
@@ -687,7 +687,7 @@ export const locationData: Record<string, LocationData> = {
     },
     nearby: [
       { name: "Banstead", slug: "banstead" },
-      { name: "Reigate", slug: "reigate" },
+      { name: "Coulsdon", slug: "coulsdon" },
       { name: "Tadworth", slug: "tadworth" },
     ],
   },
@@ -814,7 +814,119 @@ export const locationData: Record<string, LocationData> = {
     nearby: [
       { name: "Caterham", slug: "caterham" },
       { name: "Warlingham", slug: "warlingham" },
+      { name: "Purley", slug: "purley" },
+    ],
+  },
+  "hailsham": {
+    name: "Hailsham",
+    metaTitle: "Gutter Cleaning Hailsham | Local Gutter Cleaners Near You",
+    metaDescription: "Gutter cleaning in Hailsham and nearby villages. Blocked gutters and downpipes cleared, conservatory gutters and fascias cleaned. Fully insured. Free photo quotes.",
+    localInfo: {
+      landmarks: ["Hailsham High Street", "Hailsham Pavilion", "The Cuckoo Trail", "St Mary's Church"],
+      roads: ["High Street", "George Street", "South Road", "Ersham Road", "London Road", "Battle Road"]
+    },
+    nearby: [
+      { name: "Polegate", slug: "polegate" },
+      { name: "Eastbourne", slug: "eastbourne" },
+      { name: "Uckfield", slug: "uckfield" },
+    ],
+  },
+  "polegate": {
+    name: "Polegate",
+    metaTitle: "Gutter Cleaning Polegate | Local Gutter Cleaners Near You",
+    metaDescription: "Gutter cleaning in Polegate, Willingdon and Wannock. Blocked gutters cleared, downpipes flushed, fascias washed. Fully insured. Free photo quotes – call 01273 569347.",
+    localInfo: {
+      landmarks: ["Polegate Windmill", "Polegate Station", "The Cuckoo Trail", "Wannock Glen"],
+      roads: ["High Street", "Station Road", "Eastbourne Road", "Wannock Road", "Dittons Road"]
+    },
+    nearby: [
+      { name: "Eastbourne", slug: "eastbourne" },
+      { name: "Hailsham", slug: "hailsham" },
+      { name: "Seaford", slug: "seaford" },
+    ],
+  },
+  "crowborough": {
+    name: "Crowborough",
+    metaTitle: "Gutter Cleaning Crowborough | Local Gutter Cleaners Near You",
+    metaDescription: "Gutter cleaning in Crowborough. Leaf-blocked gutters near Ashdown Forest cleared, downpipes flushed, gutter guards fitted. Fully insured. Free photo quotes.",
+    localInfo: {
+      landmarks: ["Crowborough Cross", "Crowborough Beacon", "Ashdown Forest", "Goldsmiths Leisure Centre"],
+      roads: ["High Street", "Beacon Road", "London Road", "Croft Road", "Church Road"]
+    },
+    nearby: [
+      { name: "Uckfield", slug: "uckfield" },
+      { name: "East Grinstead", slug: "east-grinstead" },
+      { name: "Edenbridge", slug: "edenbridge" },
+    ],
+  },
+  "merstham": {
+    name: "Merstham",
+    metaTitle: "Gutter Cleaning Merstham | Local Gutter Cleaners Near You",
+    metaDescription: "Gutter cleaning in Merstham. Blocked gutters and downpipes cleared, fascias and soffits washed. Fully insured. Free photo quotes – call 01273 569347.",
+    localInfo: {
+      landmarks: ["Merstham Village", "Quality Street", "Merstham Station", "Merstham Recreation Ground"],
+      roads: ["High Street", "Station Road North", "Nutfield Road", "London Road South", "Bletchingley Road"]
+    },
+    nearby: [
+      { name: "Redhill", slug: "redhill" },
+      { name: "Reigate", slug: "reigate" },
+      { name: "Chipstead", slug: "chipstead" },
+    ],
+  },
+  "purley": {
+    name: "Purley",
+    metaTitle: "Gutter Cleaning Purley | Local Gutter Cleaners Near You",
+    metaDescription: "Gutter cleaning in Purley. Blocked gutters and downpipes cleared, conservatory gutters cleaned, high-level access for taller homes. Fully insured. Free photo quotes.",
+    localInfo: {
+      landmarks: ["Purley Cross", "Purley Station", "Purley Downs", "Foxley Wood"],
+      roads: ["Brighton Road", "Godstone Road", "Russell Hill Road", "Downs Court Road", "Higher Drive"]
+    },
+    nearby: [
+      { name: "Croydon", slug: "croydon" },
+      { name: "Coulsdon", slug: "coulsdon" },
+      { name: "Caterham", slug: "caterham" },
+    ],
+  },
+  "coulsdon": {
+    name: "Coulsdon",
+    metaTitle: "Gutter Cleaning Coulsdon | Local Gutter Cleaners Near You",
+    metaDescription: "Gutter cleaning in Coulsdon. Blocked gutters and downpipes cleared, fascias washed, gutter guards fitted. Fully insured. Free photo quotes – call 01273 569347.",
+    localInfo: {
+      landmarks: ["Farthing Downs", "Coulsdon Common", "Coulsdon Town Station", "Happy Valley"],
+      roads: ["Brighton Road", "Chipstead Valley Road", "Coulsdon Road", "Lion Green Road", "Marlpit Lane"]
+    },
+    nearby: [
+      { name: "Purley", slug: "purley" },
+      { name: "Chipstead", slug: "chipstead" },
       { name: "Banstead", slug: "banstead" },
+    ],
+  },
+  "chichester": {
+    name: "Chichester",
+    metaTitle: "Gutter Cleaning Chichester | Local Gutter Cleaners Near You",
+    metaDescription: "Gutter cleaning in Chichester. Gutters on period and modern homes cleared, downpipes flushed, high-level access for taller buildings. Fully insured. Free photo quotes.",
+    localInfo: {
+      landmarks: ["Chichester Cathedral", "Chichester Market Cross", "Chichester Festival Theatre", "Priory Park", "Chichester Harbour"],
+      roads: ["North Street", "South Street", "East Street", "West Street", "Broyle Road", "Westhampnett Road"]
+    },
+    nearby: [
+      { name: "Bognor Regis", slug: "bognor-regis" },
+      { name: "Arundel", slug: "arundel" },
+      { name: "Littlehampton", slug: "littlehampton" },
+    ],
+  },
+  "bognor-regis": {
+    name: "Bognor Regis",
+    metaTitle: "Gutter Cleaning Bognor Regis | Local Gutter Cleaners Near You",
+    metaDescription: "Gutter cleaning in Bognor Regis and Aldwick. Blocked gutters cleared, downpipes flushed, fascias washed. Fully insured. Free photo quotes.",
+    localInfo: {
+      landmarks: ["Bognor Regis Pier", "Hotham Park", "Bognor Regis Station", "Aldwick"],
+      roads: ["London Road", "High Street", "Aldwick Road", "Hawthorn Road", "Upper Bognor Road"]
+    },
+    nearby: [
+      { name: "Chichester", slug: "chichester" },
+      { name: "Littlehampton", slug: "littlehampton" },
+      { name: "Arundel", slug: "arundel" },
     ],
   },
 };

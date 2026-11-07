@@ -3,9 +3,37 @@ import { SEOSchema } from "@/components/SEOSchema";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { QuoteDialog } from "@/components/QuoteDialog";
+import { FAQSection } from "@/components/FAQSection";
 import { Home, MapPin, Ruler, Wrench } from "lucide-react";
 import { Link } from "react-router-dom";
 import teamProfessional from "@/assets/gutter-cleaning-team.webp";
+
+const pricingFaqs = [
+  {
+    question: "How much does gutter cleaning cost?",
+    answer: "Gutter cleaning starts from £80 for a small terraced house or flat, from £120 for a typical 3–4 bedroom semi-detached and from £180 for a large detached or extended property. Send photos for a fixed price.",
+  },
+  {
+    question: "Is there a minimum charge?",
+    answer: "Yes – our minimum charge is £80.",
+  },
+  {
+    question: "Is downpipe clearing included in the price?",
+    answer: "Yes. Standard gutter cleaning includes clearing the downpipes so water flows freely, a visual inspection, taking the debris away and photos of the completed work.",
+  },
+  {
+    question: "What makes gutter cleaning cost more?",
+    answer: "Taller properties, longer runs of guttering, difficult access or parking, heavily compacted debris and repairs found during the clean. We'll always tell you about extra work and price it before going ahead.",
+  },
+  {
+    question: "Can I add conservatory gutters, fascias or gutter guards?",
+    answer: "Yes. Conservatory gutters and roofs, fascia and soffit cleaning, gutter guards and roof moss removal can all be added to the same visit. They're priced from your photos and included in one fixed quote.",
+  },
+  {
+    question: "How much notice do I need to give to cancel?",
+    answer: "Please give at least 24 hours' notice. Cancellations with less notice may be charged up to 50% of the quoted price, as set out in our terms.",
+  },
+];
 
 const Pricing = () => {
   const examples = [
@@ -38,6 +66,7 @@ const Pricing = () => {
           { name: "Home", url: "/" },
           { name: "Pricing", url: "/pricing" }
         ]}
+        faqs={pricingFaqs}
       />
       <section className="bg-muted/30 py-12">
         <div className="container">
@@ -210,6 +239,8 @@ const Pricing = () => {
           </p>
         </div>
       </section>
+
+      <FAQSection faqs={pricingFaqs} title="Gutter Cleaning Prices: FAQs" />
 
       <section className="bg-gradient-to-br from-primary to-primary/80 py-16 text-primary-foreground">
         <div className="container text-center">
