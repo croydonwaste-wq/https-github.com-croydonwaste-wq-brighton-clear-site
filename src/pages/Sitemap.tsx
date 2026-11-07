@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { SEOSchema } from "@/components/SEOSchema";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { FileText, MapPin, Wrench, FileCheck } from "lucide-react";
+import { locationData } from "@/data/locationData";
 
 const Sitemap = () => {
   const sections = [
@@ -41,39 +42,9 @@ const Sitemap = () => {
     {
       title: "Service Areas",
       icon: MapPin,
-      links: [
-        { name: "Brighton", href: "/gutter-cleaning/brighton" },
-        { name: "Hove", href: "/gutter-cleaning/hove" },
-        { name: "Worthing", href: "/gutter-cleaning/worthing" },
-        { name: "Crawley", href: "/gutter-cleaning/crawley" },
-        { name: "Horsham", href: "/gutter-cleaning/horsham" },
-        { name: "Guildford", href: "/gutter-cleaning/guildford" },
-        { name: "Woking", href: "/gutter-cleaning/woking" },
-        { name: "Epsom", href: "/gutter-cleaning/epsom" },
-        { name: "Reigate", href: "/gutter-cleaning/reigate" },
-        { name: "Redhill", href: "/gutter-cleaning/redhill" },
-        { name: "Dorking", href: "/gutter-cleaning/dorking" },
-        { name: "Leatherhead", href: "/gutter-cleaning/leatherhead" },
-        { name: "East Grinstead", href: "/gutter-cleaning/east-grinstead" },
-        { name: "Haywards Heath", href: "/gutter-cleaning/haywards-heath" },
-        { name: "Burgess Hill", href: "/gutter-cleaning/burgess-hill" },
-        { name: "Lewes", href: "/gutter-cleaning/lewes" },
-        { name: "Eastbourne", href: "/gutter-cleaning/eastbourne" },
-        { name: "Peacehaven", href: "/gutter-cleaning/peacehaven" },
-        { name: "Newhaven", href: "/gutter-cleaning/newhaven" },
-        { name: "Seaford", href: "/gutter-cleaning/seaford" },
-        { name: "Uckfield", href: "/gutter-cleaning/uckfield" },
-        { name: "Hassocks", href: "/gutter-cleaning/hassocks" },
-        { name: "Shoreham-by-Sea", href: "/gutter-cleaning/shoreham-by-sea" },
-        { name: "Lancing", href: "/gutter-cleaning/lancing" },
-        { name: "Littlehampton", href: "/gutter-cleaning/littlehampton" },
-        { name: "Arundel", href: "/gutter-cleaning/arundel" },
-        { name: "Caterham", href: "/gutter-cleaning/caterham" },
-        { name: "Oxted", href: "/gutter-cleaning/oxted" },
-        { name: "Horley", href: "/gutter-cleaning/horley" },
-        { name: "Banstead", href: "/gutter-cleaning/banstead" },
-        { name: "Croydon", href: "/gutter-cleaning/croydon" },
-      ],
+      links: Object.entries(locationData)
+        .map(([slug, l]) => ({ name: l.name, href: `/gutter-cleaning/${slug}` }))
+        .sort((a, b) => a.name.localeCompare(b.name)),
     },
   ];
 
@@ -89,10 +60,7 @@ const Sitemap = () => {
       />
 
       <div className="container py-8">
-        <Breadcrumbs items={[
-          { label: "Home", href: "/" },
-          { label: "Sitemap", href: "/sitemap" }
-        ]} />
+        <Breadcrumbs items={[{ label: "Sitemap" }]} />
 
         <div className="mb-12 text-center">
           <h1 className="mb-4 text-4xl font-bold md:text-5xl">Sitemap</h1>

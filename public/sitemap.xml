@@ -1,454 +1,368 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Core Pages -->
   <url>
     <loc>https://www.guttercleaningsnearme.co.uk/</loc>
-    <lastmod>2026-01-08</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-11-07</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.guttercleaningsnearme.co.uk/services</loc>
-    <lastmod>2026-01-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.guttercleaningsnearme.co.uk/areas</loc>
-    <lastmod>2026-01-08</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-11-07</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.guttercleaningsnearme.co.uk/pricing</loc>
-    <lastmod>2026-01-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-11-07</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.guttercleaningsnearme.co.uk/areas</loc>
+    <lastmod>2026-11-07</lastmod>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.guttercleaningsnearme.co.uk/faq</loc>
-    <lastmod>2026-01-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-11-07</lastmod>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.guttercleaningsnearme.co.uk/about</loc>
-    <lastmod>2026-01-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-11-07</lastmod>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.guttercleaningsnearme.co.uk/contact</loc>
-    <lastmod>2026-01-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-11-07</lastmod>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.guttercleaningsnearme.co.uk/sitemap</loc>
-    <lastmod>2026-01-08</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-11-07</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.guttercleaningsnearme.co.uk/privacy</loc>
-    <lastmod>2026-01-08</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.4</priority>
+    <lastmod>2026-11-07</lastmod>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.guttercleaningsnearme.co.uk/terms</loc>
-    <lastmod>2026-01-08</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.4</priority>
+    <lastmod>2026-11-07</lastmod>
+    <priority>0.5</priority>
   </url>
-
-  <!-- Service Pages -->
   <url>
     <loc>https://www.guttercleaningsnearme.co.uk/services/gutter-cleaning-near-me</loc>
-    <lastmod>2026-01-08</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-11-07</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.guttercleaningsnearme.co.uk/services/blocked-gutters-gutter-unblocking</loc>
-    <lastmod>2026-01-08</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-11-07</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.guttercleaningsnearme.co.uk/services/downpipe-unblocking</loc>
-    <lastmod>2026-01-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-11-07</lastmod>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.guttercleaningsnearme.co.uk/services/gutter-repairs</loc>
-    <lastmod>2026-01-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-11-07</lastmod>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.guttercleaningsnearme.co.uk/services/fascia-soffit-cleaning</loc>
-    <lastmod>2026-01-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-11-07</lastmod>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.guttercleaningsnearme.co.uk/services/gutter-maintenance-plans</loc>
-    <lastmod>2026-01-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-11-07</lastmod>
+    <priority>0.9</priority>
   </url>
-
-  <!-- Location Pages - Core Service Areas -->
   <url>
     <loc>https://www.guttercleaningsnearme.co.uk/gutter-cleaning/crawley</loc>
-    <lastmod>2026-01-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2026-11-07</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.guttercleaningsnearme.co.uk/gutter-cleaning/horsham</loc>
-    <lastmod>2026-01-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2026-11-07</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.guttercleaningsnearme.co.uk/gutter-cleaning/east-grinstead</loc>
-    <lastmod>2026-01-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+    <lastmod>2026-11-07</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.guttercleaningsnearme.co.uk/gutter-cleaning/haywards-heath</loc>
-    <lastmod>2026-01-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+    <lastmod>2026-11-07</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.guttercleaningsnearme.co.uk/gutter-cleaning/burgess-hill</loc>
-    <lastmod>2026-01-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+    <lastmod>2026-11-07</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.guttercleaningsnearme.co.uk/gutter-cleaning/reigate</loc>
-    <lastmod>2026-01-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+    <lastmod>2026-11-07</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.guttercleaningsnearme.co.uk/gutter-cleaning/redhill</loc>
-    <lastmod>2026-01-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+    <lastmod>2026-11-07</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.guttercleaningsnearme.co.uk/gutter-cleaning/dorking</loc>
-    <lastmod>2026-01-08</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-11-07</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.guttercleaningsnearme.co.uk/gutter-cleaning/horley</loc>
-    <lastmod>2026-01-08</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-11-07</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.guttercleaningsnearme.co.uk/gutter-cleaning/copthorne</loc>
-    <lastmod>2026-01-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-11-07</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.guttercleaningsnearme.co.uk/gutter-cleaning/three-bridges</loc>
-    <lastmod>2026-01-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-11-07</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.guttercleaningsnearme.co.uk/gutter-cleaning/gatwick</loc>
-    <lastmod>2026-01-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-11-07</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.guttercleaningsnearme.co.uk/gutter-cleaning/charlwood</loc>
-    <lastmod>2026-01-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-11-07</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.guttercleaningsnearme.co.uk/gutter-cleaning/lingfield</loc>
-    <lastmod>2026-01-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-11-07</lastmod>
+    <priority>0.8</priority>
   </url>
-
-  <!-- Location Pages - Mid-Surrey Towns -->
   <url>
     <loc>https://www.guttercleaningsnearme.co.uk/gutter-cleaning/epsom</loc>
-    <lastmod>2026-01-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+    <lastmod>2026-11-07</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.guttercleaningsnearme.co.uk/gutter-cleaning/ewell</loc>
-    <lastmod>2026-01-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-11-07</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.guttercleaningsnearme.co.uk/gutter-cleaning/leatherhead</loc>
-    <lastmod>2026-01-08</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-11-07</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.guttercleaningsnearme.co.uk/gutter-cleaning/bookham</loc>
-    <lastmod>2026-01-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-11-07</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.guttercleaningsnearme.co.uk/gutter-cleaning/ashtead</loc>
-    <lastmod>2026-01-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-11-07</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.guttercleaningsnearme.co.uk/gutter-cleaning/guildford</loc>
-    <lastmod>2026-01-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2026-11-07</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.guttercleaningsnearme.co.uk/gutter-cleaning/godalming</loc>
-    <lastmod>2026-01-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
+    <lastmod>2026-11-07</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.guttercleaningsnearme.co.uk/gutter-cleaning/woking</loc>
-    <lastmod>2026-01-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+    <lastmod>2026-11-07</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.guttercleaningsnearme.co.uk/gutter-cleaning/farnham</loc>
-    <lastmod>2026-01-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
+    <lastmod>2026-11-07</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.guttercleaningsnearme.co.uk/gutter-cleaning/cranleigh</loc>
-    <lastmod>2026-01-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-11-07</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.guttercleaningsnearme.co.uk/gutter-cleaning/haslemere</loc>
-    <lastmod>2026-01-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-11-07</lastmod>
+    <priority>0.8</priority>
   </url>
-
-  <!-- Location Pages - West Sussex Coastal Belt -->
   <url>
     <loc>https://www.guttercleaningsnearme.co.uk/gutter-cleaning/worthing</loc>
-    <lastmod>2026-01-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2026-11-07</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.guttercleaningsnearme.co.uk/gutter-cleaning/lancing</loc>
-    <lastmod>2026-01-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
+    <lastmod>2026-11-07</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.guttercleaningsnearme.co.uk/gutter-cleaning/shoreham-by-sea</loc>
-    <lastmod>2026-01-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
+    <lastmod>2026-11-07</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.guttercleaningsnearme.co.uk/gutter-cleaning/southwick</loc>
-    <lastmod>2026-01-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-11-07</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.guttercleaningsnearme.co.uk/gutter-cleaning/steyning</loc>
-    <lastmod>2026-01-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-11-07</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.guttercleaningsnearme.co.uk/gutter-cleaning/henfield</loc>
-    <lastmod>2026-01-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-11-07</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.guttercleaningsnearme.co.uk/gutter-cleaning/storrington</loc>
-    <lastmod>2026-01-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-11-07</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.guttercleaningsnearme.co.uk/gutter-cleaning/pulborough</loc>
-    <lastmod>2026-01-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-11-07</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.guttercleaningsnearme.co.uk/gutter-cleaning/littlehampton</loc>
-    <lastmod>2026-01-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
+    <lastmod>2026-11-07</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.guttercleaningsnearme.co.uk/gutter-cleaning/arundel</loc>
-    <lastmod>2026-01-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-11-07</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.guttercleaningsnearme.co.uk/gutter-cleaning/billingshurst</loc>
-    <lastmod>2026-01-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-11-07</lastmod>
+    <priority>0.8</priority>
   </url>
-
-  <!-- Location Pages - East Sussex Corridor -->
   <url>
     <loc>https://www.guttercleaningsnearme.co.uk/gutter-cleaning/lewes</loc>
-    <lastmod>2026-01-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+    <lastmod>2026-11-07</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.guttercleaningsnearme.co.uk/gutter-cleaning/uckfield</loc>
-    <lastmod>2026-01-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
+    <lastmod>2026-11-07</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.guttercleaningsnearme.co.uk/gutter-cleaning/peacehaven</loc>
-    <lastmod>2026-01-08</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-11-07</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.guttercleaningsnearme.co.uk/gutter-cleaning/newhaven</loc>
-    <lastmod>2026-01-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
+    <lastmod>2026-11-07</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.guttercleaningsnearme.co.uk/gutter-cleaning/seaford</loc>
-    <lastmod>2026-01-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
+    <lastmod>2026-11-07</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.guttercleaningsnearme.co.uk/gutter-cleaning/rottingdean</loc>
-    <lastmod>2026-01-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-11-07</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.guttercleaningsnearme.co.uk/gutter-cleaning/saltdean</loc>
-    <lastmod>2026-01-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-11-07</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.guttercleaningsnearme.co.uk/gutter-cleaning/hove</loc>
-    <lastmod>2026-01-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
+    <lastmod>2026-11-07</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.guttercleaningsnearme.co.uk/gutter-cleaning/brighton</loc>
-    <lastmod>2026-01-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
+    <lastmod>2026-11-07</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.guttercleaningsnearme.co.uk/gutter-cleaning/eastbourne</loc>
-    <lastmod>2026-01-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+    <lastmod>2026-11-07</lastmod>
+    <priority>0.8</priority>
   </url>
-
-  <!-- Location Pages - North Surrey / Border Catchment -->
   <url>
     <loc>https://www.guttercleaningsnearme.co.uk/gutter-cleaning/banstead</loc>
-    <lastmod>2026-01-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-11-07</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.guttercleaningsnearme.co.uk/gutter-cleaning/chipstead</loc>
-    <lastmod>2026-01-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-11-07</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.guttercleaningsnearme.co.uk/gutter-cleaning/tadworth</loc>
-    <lastmod>2026-01-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-11-07</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.guttercleaningsnearme.co.uk/gutter-cleaning/caterham</loc>
-    <lastmod>2026-01-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
+    <lastmod>2026-11-07</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.guttercleaningsnearme.co.uk/gutter-cleaning/warlingham</loc>
-    <lastmod>2026-01-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-11-07</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.guttercleaningsnearme.co.uk/gutter-cleaning/oxted</loc>
-    <lastmod>2026-01-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
+    <lastmod>2026-11-07</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.guttercleaningsnearme.co.uk/gutter-cleaning/edenbridge</loc>
-    <lastmod>2026-01-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-11-07</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.guttercleaningsnearme.co.uk/gutter-cleaning/hassocks</loc>
-    <lastmod>2026-01-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
+    <lastmod>2026-11-07</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.guttercleaningsnearme.co.uk/gutter-cleaning/ditchling</loc>
-    <lastmod>2026-01-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-11-07</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.guttercleaningsnearme.co.uk/gutter-cleaning/portslade</loc>
-    <lastmod>2026-01-08</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-11-07</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.guttercleaningsnearme.co.uk/gutter-cleaning/croydon</loc>
-    <lastmod>2026-01-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+    <lastmod>2026-11-07</lastmod>
+    <priority>0.8</priority>
   </url>
 </urlset>

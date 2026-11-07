@@ -17,7 +17,7 @@ const FAQ = () => {
     },
     {
       question: "How much does gutter cleaning cost in Brighton, Hove and Sussex?",
-      answer: "Typical gutter cleaning costs range from £60-£150 depending on property size, gutter length, accessibility and condition. Factors affecting cost include: property height, gutter type, level of blockage, and whether downpipes need clearing. We provide free, no-obligation quotes. WhatsApp us photos or call 01273 569347 for an instant estimate."
+      answer: "Gutter cleaning starts from £80 for a small property, from £120 for a typical semi-detached and from £180 for a large detached house, depending on property size, gutter length, accessibility and condition. Factors affecting cost include: property height, gutter type, level of blockage, and whether downpipes need clearing. We provide free, no-obligation quotes. WhatsApp us photos or call 01273 569347 for an instant estimate."
     },
     {
       question: "Do you use ladders or gutter vacuum systems?",

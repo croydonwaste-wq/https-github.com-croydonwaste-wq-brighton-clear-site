@@ -37,7 +37,7 @@ const Privacy = () => {
 
             <h2>Right to Access, Correct and Delete Data</h2>
             <p>
-              Our customers have the right to access, correct and delete personal data relating to them, and to object to the processing of such data, by addressing a written request at any time. Mr Gutter Cleaning makes every effort to put in place suitable precautions to safeguard the security and privacy of personal data, and to prevent it from being altered, corrupted, destroyed or accessed by unauthorized third parties.
+              Our customers have the right to access, correct and delete personal data relating to them, and to object to the processing of such data, by addressing a written request at any time. Gutter Cleanings Near Me makes every effort to put in place suitable precautions to safeguard the security and privacy of personal data, and to prevent it from being altered, corrupted, destroyed or accessed by unauthorized third parties.
             </p>
             <p>
               However, we do not control each and every risk related to the use of the Internet, and therefore warn website users of the potential risks involved in the functioning and use of the Internet. Our website may include links to other websites or other internet sources. As we cannot control these websites and external sources, we cannot be held responsible for the provision or display of these websites and external sources, and may not be held liable for the content, advertising, products, services or any other material available on or from these websites or external sources.
@@ -48,12 +48,12 @@ const Privacy = () => {
               You can view or edit your personal data for our services by contacting us directly. You can also make choices about our collection and use of your data. How you can access or control your personal data will depend on which services you use.
             </p>
             <p>
-              You can choose whether you wish to receive promotional communications from Mr Gutter Cleaning by email, SMS, physical mail, and telephone. If you receive promotional email or SMS messages from us and would like to opt out, you can do so by following the directions in that message or by contacting us directly. These choices do not apply to mandatory service communications that are part of our gutter cleaning services, such as appointment confirmations and service reminders.
+              You can choose whether you wish to receive promotional communications from Gutter Cleanings Near Me by email, SMS, physical mail, and telephone. If you receive promotional email or SMS messages from us and would like to opt out, you can do so by following the directions in that message or by contacting us directly. These choices do not apply to mandatory service communications that are part of our gutter cleaning services, such as appointment confirmations and service reminders.
             </p>
 
             <h2>Information We Collect</h2>
             <p>
-              Mr Gutter Cleaning collects data to operate effectively and provide you the best experiences with our services. You provide some of this data directly, such as when you request a quote or book an appointment. The information we typically collect includes:
+              Gutter Cleanings Near Me collects data to operate effectively and provide you the best experiences with our services. You provide some of this data directly, such as when you request a quote or book an appointment. The information we typically collect includes:
             </p>
             <ul>
               <li>Name and contact information (phone, email, address)</li>
@@ -69,7 +69,7 @@ const Privacy = () => {
 
             <h2>How We Use Your Information</h2>
             <p>
-              Mr Gutter Cleaning uses the data we collect for three basic purposes: to operate our business and provide (including improving and personalizing) the services we offer, to send communications including service updates and promotional communications, and to fulfill our service obligations.
+              Gutter Cleanings Near Me uses the data we collect for three basic purposes: to operate our business and provide (including improving and personalizing) the services we offer, to send communications including service updates and promotional communications, and to fulfill our service obligations.
             </p>
             <p>
               Specifically, we use your information to:
@@ -114,7 +114,7 @@ const Privacy = () => {
 
             <h2>Data Security</h2>
             <p>
-              Mr Gutter Cleaning is committed to protecting the security of your personal data. We use a variety of security technologies and procedures to help protect your personal data from unauthorized access, use, or disclosure. However, no method of transmission over the Internet or method of electronic storage is 100% secure. Therefore, we cannot guarantee its absolute security.
+              Gutter Cleanings Near Me is committed to protecting the security of your personal data. We use a variety of security technologies and procedures to help protect your personal data from unauthorized access, use, or disclosure. However, no method of transmission over the Internet or method of electronic storage is 100% secure. Therefore, we cannot guarantee its absolute security.
             </p>
 
             <h2>Your Rights Under GDPR</h2>
@@ -150,11 +150,11 @@ const Privacy = () => {
             </p>
             <ul>
               <li>Phone: 01273 569347</li>
-              <li>Email: info@mrguttercleaning.co.uk</li>
+              <li>Email: info@guttercleaningsnearme.co.uk</li>
               <li>WhatsApp: 01273 569347</li>
             </ul>
             <p>
-              Last updated: January 2025
+              Last updated: November 2026
             </p>
           </div>
         </div>

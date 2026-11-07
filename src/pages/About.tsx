@@ -3,9 +3,9 @@ import { SEOSchema } from "@/components/SEOSchema";
 import { Card, CardContent } from "@/components/ui/card";
 import { Shield, Award, Users, Star, CheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
-import teamProfessional from "@/assets/team-professional.jpg";
-import recyclingCenter from "@/assets/recycling-center.jpg";
-import officeClearance from "@/assets/office-clearance.jpg";
+import teamProfessional from "@/assets/gutter-cleaning-team.webp";
+import recyclingCenter from "@/assets/gutter-cleaning-equipment.webp";
+import officeClearance from "@/assets/scaffold-tower-gutter-access.webp";
 
 const About = () => {
   const values = [

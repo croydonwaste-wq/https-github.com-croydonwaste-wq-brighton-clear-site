@@ -5,11 +5,11 @@ import { Phone, MessageCircle, Shield, Clock, Award, Users, CheckCircle2, Star, 
 import { SEOSchema } from "@/components/SEOSchema";
 import { QuoteDialog } from "@/components/QuoteDialog";
 import { FAQSection } from "@/components/FAQSection";
-import heroImage from "@/assets/hero-surrey.jpg";
-import teamImage from "@/assets/team-professional.jpg";
-import gutterCleaningImage from "@/assets/house-clearance.jpg";
-import blockedGuttersImage from "@/assets/overflowing-bins.jpg";
-import repairsImage from "@/assets/garden-clearance.jpg";
+import heroImage from "@/assets/gutter-cleaner-on-ladder.webp";
+import teamImage from "@/assets/gutter-cleaning-team.webp";
+import gutterCleaningImage from "@/assets/gutter-cleaning-on-ladder.webp";
+import blockedGuttersImage from "@/assets/overflowing-blocked-gutter.webp";
+import repairsImage from "@/assets/leaf-filled-gutter.webp";
 
 const Home = () => {
   const services = [
@@ -71,7 +71,7 @@ const Home = () => {
   const faqs = [
     {
       question: "How much does gutter cleaning cost?",
-      answer: "Gutter cleaning typically costs £60-£150 depending on property size, gutter length and condition. We provide free, no-obligation quotes. Call 01273 569347 or WhatsApp us photos for an instant estimate."
+      answer: "Gutter cleaning starts from £80 for a small terraced house or flat, from £120 for a typical semi-detached and from £180 for a large detached property. The final price depends on gutter length, height, access and how blocked the gutters are. Send photos for a free fixed-price quote, or call 01273 569347."
     },
     {
       question: "How often should I get my gutters cleaned?",
@@ -162,9 +162,12 @@ const Home = () => {
             <div className="relative">
               <img
                 src={heroImage}
-                alt="Professional gutter cleaning service in Brighton and Sussex"
+                alt="Gutter cleaner clearing a house gutter in Sussex"
                 className="rounded-lg shadow-2xl"
+                width={1280}
+                height={720}
                 loading="eager"
+                {...{ fetchpriority: "high" }}
               />
             </div>
           </div>
@@ -212,9 +215,12 @@ const Home = () => {
             ))}
           </div>
 
-          <div className="mt-12 text-center">
+          <div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Button size="lg" asChild>
               <Link to="/services">View All Services</Link>
+            </Button>
+            <Button size="lg" variant="outline" asChild>
+              <Link to="/pricing">See Gutter Cleaning Prices</Link>
             </Button>
           </div>
         </div>
@@ -257,7 +263,9 @@ const Home = () => {
             <div>
               <img
                 src={teamImage}
-                alt="Professional gutter cleaning team with equipment"
+                alt="Two gutter cleaners inspecting and clearing a house gutter"
+                width={1280}
+                height={725}
                 className="rounded-lg shadow-xl"
                 loading="lazy"
               />
@@ -346,10 +354,8 @@ const Home = () => {
             WhatsApp us photos of your gutters for a fast quote, or call for same-day service across Brighton, Hove, Sussex and Surrey.
           </p>
           <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
-            <Button size="lg" variant="secondary">
-              <Link to="/contact" className="flex items-center">
-                Get Free Quote
-              </Link>
+            <Button size="lg" variant="secondary" asChild>
+              <Link to="/contact">Get Free Quote</Link>
             </Button>
             <Button size="lg" variant="outline" className="border-primary-foreground bg-transparent text-primary-foreground hover:bg-primary-foreground hover:text-primary" asChild>
               <a href="tel:01273569347">

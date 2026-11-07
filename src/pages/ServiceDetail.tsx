@@ -7,6 +7,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { FAQSection } from "@/components/FAQSection";
 import { QuoteDialog } from "@/components/QuoteDialog";
 import servicesData from "@/data/servicesData";
+import { brandData } from "@/data/brandData";
 import NotFound from "./NotFound";
 
 const ServiceDetail = () => {
@@ -29,6 +30,7 @@ const ServiceDetail = () => {
           { name: service.title, url: `/services/${service.slug}` }
         ]}
         faqs={service.faqs}
+        service={{ name: service.title, description: service.metaDescription }}
       />
 
       <div className="container py-12">
@@ -159,14 +161,43 @@ const ServiceDetail = () => {
                   </p>
                   <div className="flex flex-wrap gap-2">
                     {["Brighton", "Hove", "Crawley", "Horsham", "Guildford", "Worthing", "Eastbourne", "Redhill"].map((area) => (
-                      <span key={area} className="rounded-full bg-muted px-3 py-1 text-sm">
+                      <Link
+                        key={area}
+                        to={`/gutter-cleaning/${area.toLowerCase()}`}
+                        className="rounded-full bg-muted px-3 py-1 text-sm hover:bg-primary hover:text-primary-foreground"
+                      >
                         {area}
-                      </span>
+                      </Link>
                     ))}
                   </div>
                   <Button variant="outline" size="sm" className="mt-4 w-full" asChild>
                     <Link to="/areas">View All Areas</Link>
                   </Button>
+                </CardContent>
+              </Card>
+
+              {/* Pricing & related services */}
+              <Card>
+                <CardContent className="pt-6">
+                  <h3 className="mb-2 text-lg font-bold">Prices</h3>
+                  <p className="mb-4 text-sm text-muted-foreground">
+                    Gutter cleaning starts from £{brandData.priceFrom}. Send photos for a fixed-price quote.
+                  </p>
+                  <Button variant="outline" size="sm" className="w-full" asChild>
+                    <Link to="/pricing">See Gutter Cleaning Prices</Link>
+                  </Button>
+                  <h3 className="mb-3 mt-6 text-lg font-bold">Related Services</h3>
+                  <ul className="space-y-2 text-sm">
+                    {servicesData
+                      .filter((s) => s.slug !== service.slug)
+                      .map((s) => (
+                        <li key={s.slug}>
+                          <Link to={`/services/${s.slug}`} className="text-primary hover:underline">
+                            {s.title}
+                          </Link>
+                        </li>
+                      ))}
+                  </ul>
                 </CardContent>
               </Card>
 

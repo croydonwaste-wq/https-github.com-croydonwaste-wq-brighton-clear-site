@@ -1,4 +1,7 @@
 import { Helmet } from "react-helmet";
+import { useLocation } from "react-router-dom";
+import { brandData, SITE_URL } from "@/data/brandData";
+import { locationData } from "@/data/locationData";
 
 interface SEOSchemaProps {
   title: string;
@@ -6,135 +9,140 @@ interface SEOSchemaProps {
   type?: "LocalBusiness" | "FAQPage" | "WebPage";
   breadcrumbs?: Array<{ name: string; url: string }>;
   faqs?: Array<{ question: string; answer: string }>;
+  /** Emit FAQPage markup for `faqs`. Disable for templated FAQs repeated across many pages. */
+  faqSchema?: boolean;
+  /** Describe the page's main service with Service markup. */
+  service?: { name: string; description: string; serviceType?: string; areaName?: string };
+  noindex?: boolean;
 }
 
-export const SEOSchema = ({ title, description, type = "WebPage", breadcrumbs, faqs }: SEOSchemaProps) => {
-  const baseUrl = "https://www.guttercleaningsnearme.co.uk";
-  
-  const localBusinessSchema = {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "LocalBusiness",
-        "@id": `${baseUrl}/#business`,
-        "name": "Gutter Cleanings Near Me",
-        "url": baseUrl,
-        "telephone": "+441273569347",
-        "email": "info@guttercleaningsnearme.co.uk",
-        "description": "Professional gutter cleaning, blocked gutter clearance, and gutter repairs across Brighton, Hove, Sussex and Surrey. Fast, reliable service with fully insured operatives.",
-        "areaServed": [
-          { "@type": "City", "name": "Brighton" },
-          { "@type": "City", "name": "Hove" },
-          { "@type": "City", "name": "Portslade" },
-          { "@type": "City", "name": "Peacehaven" },
-          { "@type": "City", "name": "Worthing" },
-          { "@type": "City", "name": "Crawley" },
-          { "@type": "City", "name": "Horsham" },
-          { "@type": "City", "name": "Eastbourne" },
-          { "@type": "City", "name": "Guildford" },
-          { "@type": "City", "name": "Woking" },
-          { "@type": "City", "name": "Redhill" },
-          { "@type": "City", "name": "Reigate" },
-          { "@type": "City", "name": "Epsom" },
-          { "@type": "City", "name": "Leatherhead" },
-          { "@type": "City", "name": "Dorking" },
-          { "@type": "City", "name": "Croydon" },
-          { "@type": "State", "name": "Sussex" },
-          { "@type": "State", "name": "Surrey" }
-        ],
-        "sameAs": [],
-        "priceRange": "££",
-        "image": `${baseUrl}/hero-brighton.jpg`,
-        "openingHoursSpecification": [
-          {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-            "opens": "07:00",
-            "closes": "20:00"
-          }
-        ]
-      },
-      {
-        "@type": "WebSite",
-        "@id": `${baseUrl}/#website`,
-        "url": baseUrl,
-        "name": "Gutter Cleanings Near Me",
-        "description": "Find professional gutter cleaning services near you in Brighton, Hove, Sussex and Surrey. Blocked gutters cleared fast.",
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": `${baseUrl}/?s={search_term_string}`,
-          "query-input": "required name=search_term_string"
-        }
-      },
-      {
-        "@type": "Organization",
-        "name": "Gutter Cleanings Near Me",
-        "url": baseUrl,
-        "logo": `${baseUrl}/logo.png`,
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "contactType": "customer support",
-          "telephone": "+441273569347",
-          "email": "info@guttercleaningsnearme.co.uk",
-          "availableLanguage": "English"
-        }
-      }
-    ]
+const businessId = `${SITE_URL}/#business`;
+
+const normalisePath = (pathname: string) =>
+  pathname !== "/" && pathname.endsWith("/") ? pathname.slice(0, -1) : pathname;
+
+export const SEOSchema = ({
+  title,
+  description,
+  breadcrumbs,
+  faqs,
+  faqSchema = true,
+  service,
+  noindex = false,
+}: SEOSchemaProps) => {
+  const { pathname } = useLocation();
+  const url = `${SITE_URL}${normalisePath(pathname)}`;
+
+  const business = {
+    "@type": "HomeAndConstructionBusiness",
+    "@id": businessId,
+    name: brandData.name,
+    url: SITE_URL,
+    telephone: brandData.phoneE164,
+    email: brandData.email,
+    image: brandData.ogImage,
+    description: brandData.description,
+    priceRange: `From £${brandData.priceFrom}`,
+    areaServed: [
+      ...Object.values(locationData).map((l) => ({ "@type": "Place", name: l.name })),
+      { "@type": "AdministrativeArea", name: "East Sussex" },
+      { "@type": "AdministrativeArea", name: "West Sussex" },
+      { "@type": "AdministrativeArea", name: "Surrey" },
+    ],
+    openingHoursSpecification: brandData.openingHours.map((h) => ({
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: h.days,
+      opens: h.opens,
+      closes: h.closes,
+    })),
+    sameAs: [brandData.googleReviewsLink],
   };
 
-  const breadcrumbSchema = breadcrumbs ? {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": breadcrumbs.map((crumb, index) => ({
-      "@type": "ListItem",
-      "position": index + 1,
-      "name": crumb.name,
-      "item": `${baseUrl}${crumb.url}`
-    }))
-  } : null;
+  const graph: Record<string, unknown>[] = [
+    business,
+    {
+      "@type": "WebSite",
+      "@id": `${SITE_URL}/#website`,
+      url: SITE_URL,
+      name: brandData.name,
+      publisher: { "@id": businessId },
+      inLanguage: "en-GB",
+    },
+    {
+      "@type": "WebPage",
+      "@id": `${url}#webpage`,
+      url,
+      name: title,
+      description,
+      isPartOf: { "@id": `${SITE_URL}/#website` },
+      about: { "@id": businessId },
+      inLanguage: "en-GB",
+    },
+  ];
 
-  const faqSchema = faqs ? {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": faqs.map(faq => ({
-      "@type": "Question",
-      "name": faq.question,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": faq.answer
-      }
-    }))
-  } : null;
+  if (service) {
+    graph.push({
+      "@type": "Service",
+      "@id": `${url}#service`,
+      name: service.name,
+      serviceType: service.serviceType || service.name,
+      description: service.description,
+      provider: { "@id": businessId },
+      areaServed: service.areaName
+        ? { "@type": "Place", name: service.areaName }
+        : [
+            { "@type": "AdministrativeArea", name: "East Sussex" },
+            { "@type": "AdministrativeArea", name: "West Sussex" },
+            { "@type": "AdministrativeArea", name: "Surrey" },
+          ],
+      url,
+    });
+  }
+
+  if (breadcrumbs && breadcrumbs.length > 1) {
+    graph.push({
+      "@type": "BreadcrumbList",
+      itemListElement: breadcrumbs.map((crumb, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        name: crumb.name,
+        item: `${SITE_URL}${crumb.url === "/" ? "/" : normalisePath(crumb.url)}`,
+      })),
+    });
+  }
+
+  if (faqs && faqs.length > 0 && faqSchema) {
+    graph.push({
+      "@type": "FAQPage",
+      mainEntity: faqs.map((faq) => ({
+        "@type": "Question",
+        name: faq.question,
+        acceptedAnswer: { "@type": "Answer", text: faq.answer },
+      })),
+    });
+  }
+
+  const jsonLd = noindex ? null : { "@context": "https://schema.org", "@graph": graph };
 
   return (
     <Helmet>
+      <html lang="en-GB" />
       <title>{title}</title>
       <meta name="description" content={description} />
-      <meta name="robots" content="index, follow" />
-      <link rel="canonical" href={`${baseUrl}${typeof window !== 'undefined' ? window.location.pathname : ''}`} />
+      <meta name="robots" content={noindex ? "noindex, follow" : "index, follow, max-image-preview:large"} />
+      {!noindex && <link rel="canonical" href={url} />}
+      <meta property="og:site_name" content={brandData.name} />
+      <meta property="og:locale" content="en_GB" />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:type" content="website" />
-      <meta property="og:url" content={`${baseUrl}${typeof window !== 'undefined' ? window.location.pathname : ''}`} />
+      <meta property="og:url" content={url} />
+      <meta property="og:image" content={brandData.ogImage} />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
-      
-      <script type="application/ld+json">
-        {JSON.stringify(localBusinessSchema)}
-      </script>
-      
-      {breadcrumbSchema && (
-        <script type="application/ld+json">
-          {JSON.stringify(breadcrumbSchema)}
-        </script>
-      )}
-      
-      {faqSchema && (
-        <script type="application/ld+json">
-          {JSON.stringify(faqSchema)}
-        </script>
-      )}
+      <meta name="twitter:image" content={brandData.ogImage} />
+      {jsonLd && <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>}
     </Helmet>
   );
 };

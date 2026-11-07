@@ -6,12 +6,12 @@ import { SEOSchema } from "@/components/SEOSchema";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { QuoteDialog } from "@/components/QuoteDialog";
 import servicesData from "@/data/servicesData";
-import gutterCleaningImage from "@/assets/house-clearance.jpg";
-import blockedGuttersImage from "@/assets/overflowing-bins.jpg";
-import downpipeImage from "@/assets/garden-clearance.jpg";
-import repairsImage from "@/assets/builders-waste.jpg";
-import fasciaImage from "@/assets/office-clearance.jpg";
-import maintenanceImage from "@/assets/tenancy-clearance.jpg";
+import gutterCleaningImage from "@/assets/gutter-cleaning-on-ladder.webp";
+import blockedGuttersImage from "@/assets/overflowing-blocked-gutter.webp";
+import downpipeImage from "@/assets/leaf-filled-gutter.webp";
+import repairsImage from "@/assets/commercial-gutter-cleaning.webp";
+import fasciaImage from "@/assets/fascia-soffit-washing.webp";
+import maintenanceImage from "@/assets/gutter-cleaning-team.webp";
 
 const Services = () => {
   const serviceImages: Record<string, string> = {
@@ -35,7 +35,7 @@ const Services = () => {
   return (
     <>
       <SEOSchema
-        title="Gutter Cleaning Services | Brighton, Sussex & Surrey | Book Today"
+        title="Gutter Cleaning Services | Cleaning, Unblocking & Repairs | Sussex & Surrey"
         description="Professional gutter cleaning, repairs & maintenance across Brighton, Sussex & Surrey. Fully insured local service. Free quotes available."
         type="LocalBusiness"
         breadcrumbs={[
@@ -212,10 +212,8 @@ const Services = () => {
               Get a free quote today. Same-day service available across Brighton, Hove, Sussex and Surrey.
             </p>
             <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
-              <Button size="lg" variant="secondary">
-                <Link to="/contact" className="flex items-center">
-                  Get Free Quote
-                </Link>
+              <Button size="lg" variant="secondary" asChild>
+                <Link to="/contact">Get Free Quote</Link>
               </Button>
               <Button size="lg" variant="outline" className="border-primary-foreground bg-transparent text-primary-foreground hover:bg-primary-foreground hover:text-primary" asChild>
                 <a href="tel:01273569347">

@@ -9,7 +9,7 @@ import { useToast } from "@/hooks/use-toast";
 import { Phone, Mail, MapPin, Clock, MessageCircle, Upload, X } from "lucide-react";
 import { useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
-import heroSurrey from "@/assets/hero-surrey.jpg";
+import heroSurrey from "@/assets/gutter-cleaner-on-ladder.webp";
 
 const Contact = () => {
   const [files, setFiles] = useState<File[]>([]);
@@ -148,7 +148,7 @@ const Contact = () => {
                   <div>
                     <h3 className="mb-1 font-semibold">Coverage Area</h3>
                     <p className="text-muted-foreground">
-                      Sussex & Surrey — 30-mile radius
+                      Sussex & Surrey
                       <br />
                       Serving Brighton, Hove, Worthing, Crawley, Horsham & beyond
                     </p>
@@ -320,7 +320,7 @@ const Contact = () => {
                 From Brighton seafront to the Surrey countryside, we provide fast, professional gutter cleaning across Sussex and Surrey.
               </p>
               <p className="text-muted-foreground">
-                Licensed, fully insured, and certified for working at height. Same-day and next-day appointments available.
+                Fully insured. Same-day and next-day appointments available, subject to availability.
               </p>
             </div>
           </div>

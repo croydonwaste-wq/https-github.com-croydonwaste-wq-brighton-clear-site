@@ -11,6 +11,7 @@ export const Header = () => {
   const navigation = [
     { name: "Home", href: "/" },
     { name: "Services", href: "/services" },
+    { name: "Prices", href: "/pricing" },
     { name: "Areas We Cover", href: "/areas" },
     { name: "FAQ", href: "/faq" },
     { name: "About", href: "/about" },
@@ -22,9 +23,9 @@ export const Header = () => {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-20 items-center justify-between">
-        <Link to="/" className="flex items-center space-x-2">
+        <Link to="/" className="flex items-center space-x-2" aria-label="Gutter Cleanings Near Me – home">
           <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary">
-            <span className="text-2xl font-bold text-primary-foreground">GCNM</span>
+            <span className="text-sm font-bold tracking-tight text-primary-foreground">GCNM</span>
           </div>
           <div className="hidden flex-col md:flex">
             <span className="text-lg font-bold leading-tight">Gutter Cleanings Near Me</span>
@@ -33,7 +34,7 @@ export const Header = () => {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden items-center gap-6 md:flex">
+        <nav className="hidden items-center gap-5 lg:gap-6 md:flex">
           {navigation.map((item) => (
             <Link
               key={item.name}
@@ -63,6 +64,8 @@ export const Header = () => {
           variant="ghost"
           size="icon"
           className="md:hidden"
+          aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+          aria-expanded={mobileMenuOpen}
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
           {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}

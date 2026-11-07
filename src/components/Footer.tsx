@@ -17,10 +17,13 @@ export const Footer = () => {
     { name: "Crawley", href: "/gutter-cleaning/crawley" },
     { name: "Horsham", href: "/gutter-cleaning/horsham" },
     { name: "Guildford", href: "/gutter-cleaning/guildford" },
+    { name: "Worthing", href: "/gutter-cleaning/worthing" },
+    { name: "Eastbourne", href: "/gutter-cleaning/eastbourne" },
     { name: "View All Areas", href: "/areas" },
   ];
 
   const quickLinks = [
+    { name: "Gutter Cleaning Prices", href: "/pricing" },
     { name: "About Us", href: "/about" },
     { name: "FAQ", href: "/faq" },
     { name: "Contact", href: "/contact" },
@@ -37,7 +40,7 @@ export const Footer = () => {
           <div>
             <div className="mb-4 flex items-center space-x-2">
               <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary">
-                <span className="text-xl font-bold text-primary-foreground">GCNM</span>
+                <span className="text-xs font-bold tracking-tight text-primary-foreground">GCNM</span>
               </div>
               <div className="flex flex-col">
                 <span className="font-bold leading-tight">Gutter Cleanings Near Me</span>
@@ -113,6 +116,7 @@ export const Footer = () => {
         <div className="mt-12 border-t pt-8 text-center text-sm text-muted-foreground">
           <p>&copy; {new Date().getFullYear()} Gutter Cleanings Near Me. All rights reserved.</p>
           <p className="mt-2">Fully Insured | £5M Public Liability Insurance</p>
+          <div className="h-16 md:hidden" aria-hidden="true" />
         </div>
       </div>
     </footer>

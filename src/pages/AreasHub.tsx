@@ -2,7 +2,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { SEOSchema } from "@/components/SEOSchema";
 import { AreaCard } from "@/components/AreaCard";
 import { MapPin } from "lucide-react";
-import heroSurrey from "@/assets/hero-surrey.jpg";
+import heroSurrey from "@/assets/gutter-cleaner-on-ladder.webp";
 
 const AreasHub = () => {
   const coreAreas = [
@@ -11,22 +11,22 @@ const AreasHub = () => {
     { name: "East Grinstead", slug: "east-grinstead", description: "Fast gutter cleaning services & surrounding villages" },
     { name: "Haywards Heath", slug: "haywards-heath", description: "Same-day gutter cleaning in Haywards Heath & Mid Sussex" },
     { name: "Burgess Hill", slug: "burgess-hill", description: "Professional gutter cleaning across Burgess Hill" },
-    { name: "Reigate", slug: "reigate", description: "Licensed gutter cleaning in Reigate & Redhill" },
+    { name: "Reigate", slug: "reigate", description: "Insured gutter cleaning in Reigate & Redhill" },
     { name: "Redhill", slug: "redhill", description: "Fast, friendly gutter cleaning in Redhill" },
     { name: "Dorking", slug: "dorking", description: "Affordable gutter cleaning in Dorking" },
     { name: "Horley", slug: "horley", description: "Professional gutter cleaning near Gatwick" },
     { name: "Copthorne", slug: "copthorne", description: "Trusted local gutter cleaning" },
-    { name: "Three Bridges", slug: "three-bridges", description: "Licensed gutter cleaning in Three Bridges" },
+    { name: "Three Bridges", slug: "three-bridges", description: "Insured gutter cleaning in Three Bridges" },
     { name: "Gatwick", slug: "gatwick", description: "Commercial & domestic gutter cleaning around Gatwick" },
     { name: "Charlwood", slug: "charlwood", description: "Professional gutter cleaning in Charlwood" },
-    { name: "Lingfield", slug: "lingfield", description: "Licensed gutter cleaning in Lingfield" },
+    { name: "Lingfield", slug: "lingfield", description: "Insured gutter cleaning in Lingfield" },
   ];
 
   const midSurreyAreas = [
     { name: "Epsom", slug: "epsom", description: "Trusted local gutter cleaning in Epsom" },
     { name: "Ewell", slug: "ewell", description: "Same-day gutter cleaning in Ewell" },
     { name: "Leatherhead", slug: "leatherhead", description: "Same-day gutter cleaning in Leatherhead" },
-    { name: "Bookham", slug: "bookham", description: "Licensed gutter cleaning in Bookham" },
+    { name: "Bookham", slug: "bookham", description: "Insured gutter cleaning in Bookham" },
     { name: "Ashtead", slug: "ashtead", description: "Professional gutter cleaning in Ashtead" },
     { name: "Guildford", slug: "guildford", description: "Efficient gutter cleaning in Guildford" },
     { name: "Godalming", slug: "godalming", description: "Fast gutter cleaning in Godalming" },
@@ -42,7 +42,7 @@ const AreasHub = () => {
     { name: "Shoreham-by-Sea", slug: "shoreham-by-sea", description: "Professional gutter cleaning in Shoreham" },
     { name: "Southwick", slug: "southwick", description: "Trusted gutter cleaning in Southwick" },
     { name: "Steyning", slug: "steyning", description: "Reliable local gutter cleaning" },
-    { name: "Henfield", slug: "henfield", description: "Licensed gutter cleaning in Henfield" },
+    { name: "Henfield", slug: "henfield", description: "Insured gutter cleaning in Henfield" },
     { name: "Storrington", slug: "storrington", description: "Fast gutter cleaning in Storrington" },
     { name: "Pulborough", slug: "pulborough", description: "Professional gutter cleaning" },
     { name: "Littlehampton", slug: "littlehampton", description: "Expert gutter cleaning in Littlehampton" },
@@ -59,6 +59,7 @@ const AreasHub = () => {
     { name: "Rottingdean", slug: "rottingdean", description: "Professional gutter cleaning" },
     { name: "Saltdean", slug: "saltdean", description: "Expert gutter cleaning in Saltdean" },
     { name: "Hove", slug: "hove", description: "Reliable gutter cleaning in Hove" },
+    { name: "Portslade", slug: "portslade", description: "Gutter cleaning in Portslade & Mile Oak" },
     { name: "Brighton", slug: "brighton", description: "Trusted gutter cleaning across Brighton" },
     { name: "Eastbourne", slug: "eastbourne", description: "Reliable gutter cleaning in Eastbourne" },
   ];
@@ -67,14 +68,15 @@ const AreasHub = () => {
     { name: "Banstead", slug: "banstead", description: "Fast gutter cleaning in Banstead" },
     { name: "Chipstead", slug: "chipstead", description: "Professional gutter cleaning" },
     { name: "Tadworth", slug: "tadworth", description: "Reliable gutter cleaning in Tadworth" },
-    { name: "Caterham", slug: "caterham", description: "Licensed gutter cleaning in Caterham" },
+    { name: "Caterham", slug: "caterham", description: "Insured gutter cleaning in Caterham" },
     { name: "Warlingham", slug: "warlingham", description: "Professional gutter cleaning" },
     { name: "Oxted", slug: "oxted", description: "Fast gutter cleaning in Oxted" },
     { name: "Edenbridge", slug: "edenbridge", description: "Reliable gutter cleaning" },
+    { name: "Croydon", slug: "croydon", description: "Gutter cleaning across Croydon" },
   ];
 
   const otherAreas = [
-    { name: "Hassocks", slug: "hassocks", description: "Licensed gutter cleaning in Hassocks" },
+    { name: "Hassocks", slug: "hassocks", description: "Insured gutter cleaning in Hassocks" },
     { name: "Ditchling", slug: "ditchling", description: "Reliable gutter cleaning in Ditchling" },
   ];
 
@@ -84,7 +86,7 @@ const AreasHub = () => {
     <div>
       <SEOSchema 
         title="Areas We Cover | Gutter Cleaning Across Sussex & Surrey"
-        description="Professional gutter cleaning across 79 locations in Sussex & Surrey. Same-day service available. Find your local gutter cleaners."
+        description={`Gutter cleaning in ${allAreas.length} towns across East Sussex, West Sussex & Surrey – from Brighton and Worthing to Crawley, Guildford and Croydon. Find your local page.`}
         breadcrumbs={[
           { name: "Home", url: "/" },
           { name: "Areas We Cover", url: "/areas" }
@@ -95,7 +97,7 @@ const AreasHub = () => {
           <Breadcrumbs items={[{ label: "Areas We Cover" }]} />
           <h1 className="mb-4">Areas We Cover — Sussex, Surrey & Beyond</h1>
           <p className="max-w-3xl text-lg text-muted-foreground">
-            Professional, licensed gutter cleaning across Sussex & Surrey within 30 miles. Covering Brighton, Hove, Worthing, Crawley, Horsham, Guildford and all surrounding areas. Same-day service available. Fully insured and certified for working at height.
+            Professional, fully insured gutter cleaning across Sussex & Surrey. Covering Brighton, Hove, Worthing, Crawley, Horsham, Guildford and all surrounding areas. Same-day service available, subject to availability.
           </p>
         </div>
       </section>
@@ -111,7 +113,7 @@ const AreasHub = () => {
           
           {/* Core Service Areas */}
           <div className="mb-16">
-            <h2 className="mb-6 text-2xl font-bold">Core Service Areas (RH10 Radius)</h2>
+            <h2 className="mb-6 text-2xl font-bold">Crawley, Gatwick & Mid Sussex</h2>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
               {coreAreas.map((area) => (
                 <AreaCard key={area.slug} {...area} />
@@ -172,7 +174,7 @@ const AreasHub = () => {
           <div className="mt-12 rounded-xl border bg-card p-8 text-center">
             <h2 className="mb-4 text-2xl">Don't See Your Town Listed?</h2>
             <p className="mx-auto mb-6 max-w-2xl text-muted-foreground">
-              We cover a 30-mile radius across Sussex & Surrey. If your town, village or postcode isn't listed above, we may still serve your area. Call or WhatsApp for a fast answer—we're here to help.
+              We cover a wide area across Sussex & Surrey. If your town, village or postcode isn't listed above, we may still serve your area. Call or WhatsApp for a fast answer—we're here to help.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4">
               <a
@@ -207,7 +209,7 @@ const AreasHub = () => {
                 From the Sussex coast to picturesque Surrey villages, we provide comprehensive gutter cleaning services across the region.
               </p>
               <p className="text-muted-foreground">
-                30-mile radius coverage • Licensed & insured • Certified for working at height • Same-day available
+                Sussex & Surrey coverage • Fully insured • Same-day available
               </p>
             </div>
           </div>

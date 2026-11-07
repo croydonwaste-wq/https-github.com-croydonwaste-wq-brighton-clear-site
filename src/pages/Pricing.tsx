@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { QuoteDialog } from "@/components/QuoteDialog";
 import { Home, MapPin, Ruler, Wrench } from "lucide-react";
 import { Link } from "react-router-dom";
-import teamProfessional from "@/assets/team-professional.jpg";
+import teamProfessional from "@/assets/gutter-cleaning-team.webp";
 
 const Pricing = () => {
   const examples = [
@@ -32,8 +32,8 @@ const Pricing = () => {
   return (
     <div>
       <SEOSchema 
-        title="Gutter Cleaning Prices | Transparent Rates | Free Quotes"
-        description="Clear gutter cleaning prices from £80. No hidden fees, free photo quotes. Serving Brighton, Sussex & Surrey. Call for a fast quote."
+        title="Gutter Cleaning Prices from £80 | Brighton, Sussex & Surrey"
+        description="How much does gutter cleaning cost? From £80 for a small house, £120 for a semi and £180 for a large detached. Fixed photo quotes across Brighton, Sussex & Surrey."
         breadcrumbs={[
           { name: "Home", url: "/" },
           { name: "Pricing", url: "/pricing" }
@@ -44,7 +44,7 @@ const Pricing = () => {
           <Breadcrumbs items={[{ label: "Pricing" }]} />
           <h1 className="mb-4">Gutter Cleaning Pricing — Simple & Transparent</h1>
           <p className="max-w-3xl text-lg text-muted-foreground">
-            Gutter cleaning starts from just £80 for small properties. Honest pricing with zero hidden fees across Brighton & Hove. Send photos for an instant, accurate quote—the price we quote is the price you pay. No surprises.
+            Gutter cleaning starts from just £80 for small properties. Typical semi-detached houses start from £120 and large detached properties from £180. Honest pricing with no hidden fees across Brighton, Sussex and Surrey. Send photos for an instant, accurate quote—the price we quote is the price you pay. No surprises.
           </p>
         </div>
       </section>
@@ -165,7 +165,7 @@ const Pricing = () => {
         <div className="container">
           <div className="grid gap-8 md:grid-cols-2 items-center">
             <div className="overflow-hidden rounded-lg">
-              <img src={teamProfessional} alt="Professional gutter cleaning team in Brighton" className="h-full w-full object-cover" loading="lazy" />
+              <img src={teamProfessional} alt="Gutter cleaning team working on a house gutter" className="h-full w-full object-cover" loading="lazy" />
             </div>
             <div>
               <h2 className="mb-4">Professional, Transparent Service</h2>
@@ -215,7 +215,7 @@ const Pricing = () => {
         <div className="container text-center">
           <h2 className="mb-4 text-white">Get Your Free Photo Quote Now</h2>
           <p className="mx-auto mb-8 max-w-2xl text-lg text-primary-foreground/90">
-            No obligation. No site visit needed. Just honest pricing within 2 hours—from residential gutter cleaning to commercial maintenance across Brighton & Hove.
+            No obligation. No site visit needed. Just honest pricing within 2 hours—from residential gutter cleaning to commercial maintenance across Brighton, Sussex and Surrey.
           </p>
           <QuoteDialog />
         </div>

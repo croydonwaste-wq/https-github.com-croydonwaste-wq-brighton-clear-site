@@ -106,7 +106,7 @@ export const locationData: Record<string, LocationData> = {
     nearby: [
       { name: "Reigate", slug: "reigate" },
       { name: "Horley", slug: "horley" },
-      { name: "Merstham", slug: "merstham" },
+      { name: "Chipstead", slug: "chipstead" },
     ],
   },
   "dorking": {
@@ -161,7 +161,7 @@ export const locationData: Record<string, LocationData> = {
     },
     nearby: [
       { name: "Crawley", slug: "crawley" },
-      { name: "Pound Hill", slug: "pound-hill" },
+      { name: "Copthorne", slug: "copthorne" },
       { name: "Horley", slug: "horley" },
     ],
   },
@@ -317,8 +317,8 @@ export const locationData: Record<string, LocationData> = {
     },
     nearby: [
       { name: "Guildford", slug: "guildford" },
-      { name: "Weybridge", slug: "weybridge" },
-      { name: "Camberley", slug: "camberley" },
+      { name: "Godalming", slug: "godalming" },
+      { name: "Leatherhead", slug: "leatherhead" },
     ],
   },
   "farnham": {
@@ -330,7 +330,7 @@ export const locationData: Record<string, LocationData> = {
       roads: ["The Borough", "West Street", "East Street", "South Street", "Castle Street"]
     },
     nearby: [
-      { name: "Aldershot", slug: "aldershot" },
+      { name: "Haslemere", slug: "haslemere" },
       { name: "Godalming", slug: "godalming" },
       { name: "Guildford", slug: "guildford" },
     ],
@@ -359,8 +359,8 @@ export const locationData: Record<string, LocationData> = {
     },
     nearby: [
       { name: "Godalming", slug: "godalming" },
-      { name: "Midhurst", slug: "midhurst" },
-      { name: "Petersfield", slug: "petersfield" },
+      { name: "Guildford", slug: "guildford" },
+      { name: "Cranleigh", slug: "cranleigh" },
     ],
   },
   
@@ -546,7 +546,7 @@ export const locationData: Record<string, LocationData> = {
     nearby: [
       { name: "Haywards Heath", slug: "haywards-heath" },
       { name: "Lewes", slug: "lewes" },
-      { name: "Crowborough", slug: "crowborough" },
+      { name: "East Grinstead", slug: "east-grinstead" },
     ],
   },
   "peacehaven": {
@@ -730,7 +730,7 @@ export const locationData: Record<string, LocationData> = {
     nearby: [
       { name: "Caterham", slug: "caterham" },
       { name: "Oxted", slug: "oxted" },
-      { name: "Woldingham", slug: "woldingham" },
+      { name: "Croydon", slug: "croydon" },
     ],
   },
   "oxted": {
@@ -787,6 +787,34 @@ export const locationData: Record<string, LocationData> = {
       { name: "Hassocks", slug: "hassocks" },
       { name: "Burgess Hill", slug: "burgess-hill" },
       { name: "Brighton", slug: "brighton" },
+    ],
+  },
+  "portslade": {
+    name: "Portslade",
+    metaTitle: "Gutter Cleaning Portslade | Local Gutter Cleaners Near You",
+    metaDescription: "Gutter cleaning in Portslade & Mile Oak. Blocked gutters and downpipes cleared, fascias washed. Fully insured. Free photo quotes – call 01273 569347.",
+    localInfo: {
+      landmarks: ["Portslade Station", "Portslade Old Village", "Easthill Park", "Foredown Tower", "Mile Oak"],
+      roads: ["Boundary Road", "Station Road", "Old Shoreham Road", "Mile Oak Road", "Trafalgar Road"]
+    },
+    nearby: [
+      { name: "Hove", slug: "hove" },
+      { name: "Southwick", slug: "southwick" },
+      { name: "Shoreham-by-Sea", slug: "shoreham-by-sea" },
+    ],
+  },
+  "croydon": {
+    name: "Croydon",
+    metaTitle: "Gutter Cleaning Croydon | Local Gutter Cleaners Near You",
+    metaDescription: "Gutter cleaning in Croydon. Blocked gutters and downpipes cleared, fascias and soffits washed. Fully insured. Free photo quotes – call 01273 569347.",
+    localInfo: {
+      landmarks: ["East Croydon Station", "Croydon Minster", "Fairfield Halls", "Lloyd Park", "Wandle Park"],
+      roads: ["George Street", "London Road", "Brighton Road", "Wellesley Road", "Addiscombe Road"]
+    },
+    nearby: [
+      { name: "Caterham", slug: "caterham" },
+      { name: "Warlingham", slug: "warlingham" },
+      { name: "Banstead", slug: "banstead" },
     ],
   },
 };

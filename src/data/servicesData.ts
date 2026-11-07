@@ -18,9 +18,9 @@ export const servicesData: ServiceDetail[] = [
   {
     slug: "gutter-cleaning-near-me",
     title: "Professional Gutter Cleaning Near Me",
-    metaTitle: "Gutter Cleaning Near Me | Brighton, Sussex & Surrey | Book Today",
-    metaDescription: "Professional gutter cleaning near you in Brighton, Hove, Sussex and Surrey. Prevent leaks, damp and water damage. Fully insured. Same-day service. Free quote.",
-    h1: "Professional Gutter Cleaning Near Me in Brighton, Sussex & Surrey",
+    metaTitle: "Gutter Cleaning Service | Gutter Vacuum Clearance | Sussex & Surrey",
+    metaDescription: "What our gutter cleaning service includes: ground-level gutter vacuum clearance, downpipe flushing and before/after photos. From £80. Brighton, Sussex & Surrey.",
+    h1: "Professional Gutter Cleaning Service in Brighton, Sussex & Surrey",
     intro: "Blocked or overflowing gutters can cause serious damage to your property. Water overflow leads to damp walls, damaged fascias, cracked foundations and costly repairs. Our professional gutter cleaning service uses industry-leading gutter vacuum systems to safely and thoroughly clear your gutters, downpipes and gullies—protecting your home from water damage all year round.",
     whatIncluded: [
       "Full gutter clearance using professional SkyVac gutter vacuum equipment",
@@ -68,7 +68,7 @@ export const servicesData: ServiceDetail[] = [
       },
       {
         question: "Are you insured?",
-        answer: "Yes, we are fully insured with public liability insurance up to £5 million. All our operatives are trained and experienced in safe gutter cleaning practices."
+        answer: "Yes, we are fully insured with £5 million public liability insurance. All our operatives are trained and experienced in safe gutter cleaning practices."
       },
       {
         question: "What are the signs that my gutters need cleaning?",
@@ -79,8 +79,8 @@ export const servicesData: ServiceDetail[] = [
   {
     slug: "blocked-gutters-gutter-unblocking",
     title: "Blocked Gutters & Gutter Unblocking Service",
-    metaTitle: "Blocked Gutters Cleared Fast | Gutter Unblocking | Same-Day Service",
-    metaDescription: "Emergency blocked gutter clearance across Brighton, Hove, Sussex & Surrey. Fast response to overflowing gutters causing damp and leaks. Call 01273 569347 today.",
+    metaTitle: "Blocked Gutters Cleared Fast | Gutter Unblocking | Sussex & Surrey",
+    metaDescription: "Blocked gutter clearance across Brighton, Hove, Sussex & Surrey. Fast response to overflowing gutters causing damp and leaks. Call 01273 569347 today.",
     h1: "Blocked Gutters & Emergency Gutter Unblocking Service",
     intro: "Blocked gutters don't just overflow—they cause serious damage. When gutters are clogged with leaves, moss and debris, rainwater has nowhere to go. It overflows onto walls, seeps into foundations, damages fascias and can even cause internal damp and structural problems. Our emergency gutter unblocking service provides fast response times across Brighton, Hove, Sussex and Surrey to clear blocked gutters before they cause expensive damage.",
     whatIncluded: [
@@ -295,7 +295,7 @@ export const servicesData: ServiceDetail[] = [
   {
     slug: "gutter-maintenance-plans",
     title: "Annual Gutter Maintenance Plans",
-    metaTitle: "Annual Gutter Maintenance Plans | Regular Gutter Cleaning Service",
+    metaTitle: "Gutter Maintenance Plans | Twice-Yearly Gutter Cleaning | Sussex & Surrey",
     metaDescription: "Annual gutter maintenance plans across Brighton, Hove, Sussex and Surrey. Regular cleaning, priority service, and peace of mind. Book your plan today.",
     h1: "Annual Gutter Maintenance Plans",
     intro: "Prevention is better than cure. Regular gutter maintenance prevents blockages, protects your property from water damage, and catches small problems before they become expensive repairs. Our annual gutter maintenance plans provide scheduled cleaning visits, priority service, and the peace of mind that your gutters are always in good working order. Perfect for homeowners and landlords who want to protect their investment without the hassle of remembering to book.",
